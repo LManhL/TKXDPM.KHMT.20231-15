@@ -36,16 +36,14 @@
 <summary>Team Member 2: Trần Văn Mạnh</summary>
 <br>
 
-- Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+- Assigned tasks: find coupling in:
+  - BaseController, HomeController, 
+  - entity/cart/... , entity/media/..., 
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
-  - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+  - Specific task details:
+    - BaseController and Cart are data coupled because in BaseController.checkMediaInCart(), BaseController and Cart share 'media' data.
 </details>
 
 <details>
