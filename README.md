@@ -1,8 +1,6 @@
 # TKXDPM.VN.20231-15
 
-## Table of contents
-
-- [Report Content](#report-content)
+## Team member
 
 | Name              | Role        |
 | :-----------------| :---------- |
