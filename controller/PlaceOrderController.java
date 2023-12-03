@@ -39,6 +39,8 @@ public class PlaceOrderController extends BaseController{
      * @return Order
      * @throws SQLException
      */
+    /* Content coupling: Do order.getlstOrderMedia().add(orderMedia) 
+     đang can thiệp trực tiếp đến giá trị thuộc tính của lớp Order */
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
