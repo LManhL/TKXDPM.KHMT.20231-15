@@ -1,10 +1,8 @@
-# TKXDPM.VN.20231-01
-Template for managing Capstone's project in the Software Design and Construction course in the 2023.1 semester.
+# TKXDPM.VN.20231-15
 
 ## Table of contents
 
-- [TKXDPM.VN.20231-01](#tkxdpmvn20231-01)
-  - [Report Content](#report-content)
+- [Report Content](#report-content)
 
 | Name              | Role        |
 | :-----------------| :---------- |
@@ -16,13 +14,11 @@ Template for managing Capstone's project in the Software Design and Construction
 
 ## Report Content
 
-The recommended report structure will have a format as follows:
-
 <details>
-  <summary>Week xx Report, where you record the week as Wxx: from date ~ to date. Example: W1: 01/10/2023~08/10/2023 </summary>
+  <summary>From 27/11/2023 ~ to 3/12/2023 </summary>
 <br>
 <details>
-<summary>Team Member 1</summary>
+<summary>Team Member 1: Nguyễn Văn Mạnh</summary>
 <br>
 
 - Assigned tasks:
@@ -35,11 +31,11 @@ The recommended report structure will have a format as follows:
   - Specific implementation details:
     - Describe specific in detail what you did last week
     - You can attach images if you want
-
+  
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Team Member 2: Trần Văn Mạnh</summary>
 <br>
 
 - Assigned tasks:
@@ -52,20 +48,10 @@ The recommended report structure will have a format as follows:
   - Specific implementation details:
     - Describe specific in detail what you did last week
     - You can attach images if you want
-
 </details>
 
-
-
-</details>
-
----
-
 <details>
-  <summary>W2: 01/10/2023~08/10/2023 </summary>
-<br>
-<details>
-<summary>Team Member 1</summary>
+<summary>Team Member 3: Đàm Thị Phương Mai</summary>
 <br>
 
 - Assigned tasks:
@@ -78,11 +64,10 @@ The recommended report structure will have a format as follows:
   - Specific implementation details:
     - Describe specific in detail what you did last week
     - You can attach images if you want
-
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Team Member 4: Nguyễn Đức Minh</summary>
 <br>
 
 - Assigned tasks:
@@ -95,10 +80,8 @@ The recommended report structure will have a format as follows:
   - Specific implementation details:
     - Describe specific in detail what you did last week
     - You can attach images if you want
-
 </details>
 
-</details>
 
 ---
 
