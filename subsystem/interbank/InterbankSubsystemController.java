@@ -13,7 +13,9 @@ import common.exception.UnrecognizedException;
 import entity.payment.CreditCard;
 import entity.payment.PaymentTransaction;
 import utils.Configs;
+// Anywhere using MyMap has data coupling
 import utils.MyMap;
+// Anywhere using Utils has data coupling
 import utils.Utils;
 
 public class InterbankSubsystemController {
@@ -30,13 +32,16 @@ public class InterbankSubsystemController {
 	}
 	
 	private String generateData(Map<String, Object> data) {
+		// This is data coupling
 		return ((MyMap) data).toJSON();
 	}
 
 	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
+		// This is data coupling
 		Map<String, Object> transaction = new MyMap();
 
 		try {
+			// This is data coupling
 			transaction.putAll(MyMap.toMyMap(card));
 		} catch (IllegalArgumentException | IllegalAccessException e) {
 			// TODO Auto-generated catch block
@@ -45,15 +50,19 @@ public class InterbankSubsystemController {
 		transaction.put("command", PAY_COMMAND);
 		transaction.put("transactionContent", contents);
 		transaction.put("amount", amount);
+		// This is data coupling 
 		transaction.put("createdAt", Utils.getToday());
 
+		// This is data coupling
 		Map<String, Object> requestMap = new MyMap();
 		requestMap.put("version", VERSION);
 		requestMap.put("transaction", transaction);
 
 		String responseText = interbankBoundary.query(Configs.PROCESS_TRANSACTION_URL, generateData(requestMap));
+		// This is data coupling
 		MyMap response = null;
 		try {
+			// This is data coupling
 			response = MyMap.toMyMap(responseText, 0);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
@@ -63,9 +72,11 @@ public class InterbankSubsystemController {
 		return makePaymentTransaction(response);
 	}
 
+	// This is data coupling
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;
+			// This is data coupling
 		MyMap transcation = (MyMap) response.get("transaction");
 		CreditCard card = new CreditCard((String) transcation.get("cardCode"), (String) transcation.get("owner"),
 				Integer.parseInt((String) transcation.get("cvvCode")), (String) transcation.get("dateExpired"));

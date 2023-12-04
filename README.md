@@ -66,9 +66,8 @@
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+
+  - Task 1: Comment coupling code in the checkout subsystem (interbank).
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
