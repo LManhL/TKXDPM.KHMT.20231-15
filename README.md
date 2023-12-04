@@ -23,7 +23,7 @@
   - Find high coulping in all classes related to ordering functionality
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/1
   - Specific implementation details:
     - Read through the entire class related to ordering functionality to find high coupling
   
@@ -38,7 +38,7 @@
   - entity/cart/... , entity/media/..., 
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/2
   - Specific task details:
     - BaseController and Cart are data coupled because in BaseController.checkMediaInCart(), BaseController and Cart share 'media' data.
 </details>
@@ -68,7 +68,7 @@
   - Task 1: Comment coupling code in the checkout subsystem (interbank).
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/3
   - Specific implementation details:
     - Describe specific in detail what you did last week
     - You can attach images if you want
