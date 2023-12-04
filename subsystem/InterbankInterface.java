@@ -12,6 +12,7 @@ import entity.payment.PaymentTransaction;
  * @author hieud
  * 
  */
+// This interface has Communicational Cohesion
 public interface InterbankInterface {
 
 	/**
