@@ -41,6 +41,7 @@ public class PlaceOrderController extends BaseController{
      */
     /* Content coupling: Do order.getlstOrderMedia().add(orderMedia) 
      đang can thiệp trực tiếp đến giá trị thuộc tính của lớp Order */
+    // Logical cohesion: createOrder nên đặt trong class Order
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
