@@ -80,6 +80,9 @@ public class PlaceOrderController extends BaseController{
    * @throws InterruptedException
    * @throws IOException
    */
+
+    // Temporal cohesion 
+    // nên tạo 1 class mới chứa các funtion để validate dữ liệu trong delivery form
     public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
     	
     }
