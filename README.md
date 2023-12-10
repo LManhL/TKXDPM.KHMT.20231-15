@@ -86,6 +86,7 @@
 - Implementation details:
   - Pull Request(s): 
     - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/5
+    - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/11
   - Specific task details: The purpose of this pull request is to implement the UI design for the admin order management section. It includes creating screens for both the order list and order details. The changes involve styling, layout, and ensuring a user-friendly interface for efficient order management on the admin side.
   
 </details>
