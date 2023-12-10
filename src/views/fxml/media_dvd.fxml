@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="700.0" text="Create new DVD Media Item:" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="698.0">
+         <children>
+            <GridPane layoutX="14.0" layoutY="14.0" prefHeight="362.0" prefWidth="382.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="142.0" text="Disc type" />
+                  <ComboBox prefHeight="26.0" prefWidth="193.0" GridPane.columnIndex="1" />
+                  <Label prefHeight="18.0" prefWidth="141.0" text="Director" GridPane.rowIndex="1" />
+                  <Label prefHeight="18.0" prefWidth="140.0" text="Runtime" GridPane.rowIndex="2" />
+                  <Label prefHeight="18.0" prefWidth="142.0" text="Studio" GridPane.rowIndex="3" />
+                  <Label prefHeight="18.0" prefWidth="142.0" text="Subtitles" GridPane.rowIndex="4" />
+                  <Label prefHeight="18.0" prefWidth="141.0" text="Release Date" GridPane.rowIndex="5" />
+                  <Label prefHeight="18.0" prefWidth="141.0" text="Film type" GridPane.rowIndex="6" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <DatePicker prefHeight="26.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Button layoutX="583.0" layoutY="376.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="86.0" text="Create" />
+            <ImageView fitHeight="150.0" fitWidth="236.0" layoutX="434.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ComboBox layoutX="434.0" layoutY="213.0" prefHeight="28.0" prefWidth="236.0" promptText="Image URL..." />
+            <Label layoutX="434.0" layoutY="195.0" text="Chose the image for this media" />
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
