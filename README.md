@@ -93,11 +93,12 @@
 <summary>Team Member 2: Trần Văn Mạnh</summary>
 <br>
 
-- Assigned tasks: 
+- Assigned tasks: chỉnh sửa giao diện giỏ hàng có chức năng hủy đơn hàng
 - Implementation details:
   - Pull Request(s): 
       - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/6
   - Specific task details:
+      - sửa file cart.fxml để có nút hủy đơn hàng
 </details>
 
 <details>
