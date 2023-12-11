@@ -119,7 +119,9 @@
 - Implementation details:
   - Pull Request(s):
     - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/7
-  - Specific task details:
+  - Specific task details: Find cohesion in the code
+    - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/10
+  - Specific task details: Create UI and base class for Admin screen
 </details>
 </details>
 
