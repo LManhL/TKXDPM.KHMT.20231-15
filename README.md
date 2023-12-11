@@ -95,12 +95,13 @@
 <summary>Team Member 2: Trần Văn Mạnh</summary>
 <br>
 
-- Assigned tasks: chỉnh sửa giao diện giỏ hàng có chức năng hủy đơn hàng
+- Assigned tasks: Update UI have function cancel order
 - Implementation details:
   - Pull Request(s): 
       - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/6
+      - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/12
   - Specific task details:
-      - sửa file cart.fxml để có nút hủy đơn hàng
+      - Update file cart.fxml have cancel button
 </details>
 
 <details>
@@ -118,13 +119,14 @@
 <summary>Team Member 4: Nguyễn Đức Minh</summary>
 <br>
 
-- Assigned tasks:
+- Assigned tasks: Create UI and base class for Admin screen
 - Implementation details:
   - Pull Request(s):
     - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/7
-  - Specific task details: Find cohesion in the code
     - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/10
-  - Specific task details: Create UI and base class for Admin screen
+  - Specific task details:
+      - Find cohesion in the code
+      - Create UI and base class for Admin screen
 </details>
 </details>
 
