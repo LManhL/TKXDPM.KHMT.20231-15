@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="24.0" layoutY="111.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0">
+         <content>
+            <VBox fx:id="vboxItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="567.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="4.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/images/Logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="pageTitle" layoutX="70.0" layoutY="1.0" prefHeight="96.0" text="ORDER MANAGEMENT" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="42.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
