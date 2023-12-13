@@ -132,6 +132,60 @@
 
 
 
+<details>
+  <summary>From 11/12/2023 ~ to 17/12/2023 </summary>
+<br>
+<details>
+<summary>Team Member 1: Nguyễn Văn Mạnh</summary>
+<br>
+
+- Assigned tasks:The Open Closed Principle
+  - 
+- Implementation details:
+  - Pull Request(s): 
+    - 
+  - Specific task details: 
+  
+</details>
+
+<details>
+<summary>Team Member 2: Trần Văn Mạnh</summary>
+<br>
+
+- Assigned tasks:  The Interface Segregation Principle + The Dependency Inversion Principle
+- Implementation details:
+  - Pull Request(s): 
+      - 
+  - Specific task details:
+      - 
+</details>
+
+<details>
+<summary>Team Member 3: Đàm Thị Phương Mai</summary>
+<br>
+
+- Assigned tasks: The Liskov Substitution Principle
+- Implementation details:
+  - Pull Request(s):
+    - 
+  - Specific task details:
+</details>
+
+<details>
+<summary>Team Member 4: Nguyễn Đức Minh</summary>
+<br>
+
+- Assigned tasks: The Single Responsibility Principle
+- Implementation details:
+  - Pull Request(s):
+    - 
+  - Specific task details:
+      - 
+</details>
+</details>
+
+
+
 
 
 
