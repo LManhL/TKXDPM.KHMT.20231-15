@@ -178,9 +178,9 @@
 - Assigned tasks: The Single Responsibility Principle
 - Implementation details:
   - Pull Request(s):
-    - 
+    - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/14
   - Specific task details:
-      - 
+      - Change some code script location to make it not violate the single responsibility principle (SRP).
 </details>
 </details>
 
