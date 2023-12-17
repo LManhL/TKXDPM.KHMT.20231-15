@@ -12,6 +12,11 @@ import entity.media.Media;
  */
 public class HomeController extends BaseController{
 
+    /*
+     * LSP
+     * có thể có lỗi trong tương lai khi dùng pương thức của lớp cha 
+     */
+
 
     /**
      * this method gets all Media in DB and return back to home to display

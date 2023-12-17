@@ -23,6 +23,11 @@ import subsystem.InterbankSubsystem;
  */
 public class PaymentController extends BaseController {
 
+	 /*
+     * LSP
+     * có thể có lỗi trong tương lai khi dùng pương thức của lớp cha 
+     */
+
 	/**
 	 * Represent the card used for payment
 	 */

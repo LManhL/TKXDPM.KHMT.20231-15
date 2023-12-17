@@ -21,6 +21,11 @@ import views.screen.popup.PopupScreen;
  */
 public class PlaceOrderController extends BaseController{
 
+     /*
+     * LSP
+     * có thể có lỗi trong tương lai khi dùng pương thức của lớp cha 
+     */
+
     /**
      * Just for logging purpose
      */
