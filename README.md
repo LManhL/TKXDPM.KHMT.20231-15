@@ -139,12 +139,15 @@
 <summary>Team Member 1: Nguyễn Văn Mạnh</summary>
 <br>
 
-- Assigned tasks:The Open Closed Principle
-  - 
+- Assigned tasks:
+  - Find class violate OCP in all project
 - Implementation details:
   - Pull Request(s): 
-    - 
-  - Specific task details: 
+    - #1
+  - Specific task details:
+      - Identify classes/functions violating OCP, especially those tightly coupled to database details.
+      - Separate database logic to facilitate extension without modifying existing code.
+      - Provide clear instructions or changes for OCP compliance and document reasons for modifications.
   
 </details>
 
