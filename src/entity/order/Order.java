@@ -37,6 +37,8 @@ public class Order {
     }
 
     public void setShippingFees(int shippingFees) {
+        // there should be a function to calculate the shipping fees
+        // not place that function in the controller class
         this.shippingFees = shippingFees;
     }
 
