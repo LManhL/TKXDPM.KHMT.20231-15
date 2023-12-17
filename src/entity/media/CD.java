@@ -67,7 +67,16 @@ public class CD extends Media {
                 + "'" + ", musicType='" + musicType + "'" + ", releasedDate='"
                 + releasedDate + "'" + "}";
     }
-
+    /* Hàm getMediaById() vi phạm nguyên tắc OCP
+     * Phương thức getMediaById giả định cụ thể về cách dữ liệu được tổ chức trong cơ sở dữ liệu (bảng CD join với Media).
+     * Điều này tạo ra sự phụ thuộc chặt chẽ vào chi tiết cụ thể của cơ sở dữ liệu.
+     * Cách giải quyết: 
+     * - Bước 1. Sử dụng Interfaces: Định nghĩa một interface có tên MediaRepository mô tả các dịch vụ lấy dữ liệu từ cơ sở dữ liệu
+     * 		mà lớp CD sẽ sử dụng, mà không biết chi tiết cụ thể về cơ sở dữ liệu.
+     * - Bước 2. Implement MediaRepository cho Cơ Sở Dữ Liệu.
+     * - Bước 3. Tạo một biến có tên mediaRepository bên trong lớp cha của nó là Media
+     * - Bước 4. Gọi biến mediaRepository để thực thi các hàm tương ứng, ví dụ bên trong hàm getMediaById gọi mediaRepository.getCDById()
+     */
     @Override
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
