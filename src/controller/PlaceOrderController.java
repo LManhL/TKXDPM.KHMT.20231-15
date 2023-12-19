@@ -22,6 +22,11 @@ import views.screen.popup.PopupScreen;
 public class PlaceOrderController extends BaseController{
 
     /**
+    *LSP
+    * Co the co loi trong tuong lai khi dung phuong thuc cua lop cha 
+    */
+
+    /**
      * Just for logging purpose
      */
     private static Logger LOGGER = utils.Utils.getLogger(PlaceOrderController.class.getName());

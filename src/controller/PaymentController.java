@@ -24,6 +24,11 @@ import subsystem.InterbankSubsystem;
 public class PaymentController extends BaseController {
 
 	/**
+    *LSP
+    * Co the co loi trong tuong lai khi dung phuong thuc cua lop cha 
+    */
+
+	/**
 	 * Represent the card used for payment
 	 */
 	private CreditCard card;
