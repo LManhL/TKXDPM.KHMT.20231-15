@@ -6,6 +6,8 @@ import java.util.List;
 
 import common.exception.MediaNotAvailableException;
 import entity.media.Media;
+import entity.order.Order;
+import entity.order.OrderMedia;
 
 public class Cart {
     
@@ -33,6 +35,7 @@ public class Cart {
         return lstCartMedia;
     }
 
+    // This function is the replacement for the clear cat function in payment class
     public void emptyCart(){
         lstCartMedia.clear();
     }
@@ -71,6 +74,23 @@ public class Cart {
             if (cartMedia.getMedia().getId() == media.getId()) return cartMedia;
         }
         return null;
+    }
+
+    // fix the single responsibility principle (it was placed in the PlaceOrderController)
+    public Order createOrder() throws SQLException{
+        Order order = new Order();
+        // The add media item into to the order should be perform in the Order class
+        // Not in the Cart class
+        // This class only need to get the Order created by passing list item in the cart
+        // Violate the single responsibility principle
+        for (Object object : lstCartMedia) {
+            CartMedia cartMedia = (CartMedia) object;
+            OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
+                                                   cartMedia.getQuantity(), 
+                                                   cartMedia.getPrice());    
+            order.getlstOrderMedia().add(orderMedia);
+        }
+        return order;
     }
 
 }

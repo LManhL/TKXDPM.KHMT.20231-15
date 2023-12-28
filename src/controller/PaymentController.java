@@ -105,7 +105,9 @@ public class PaymentController extends BaseController {
 		return result;
 	}
 
-	public void emptyCart(){
-        Cart.getCart().emptyCart();
-    }
+	// This violate SRP principle. This should be place in Cart class
+	// I will move this function there.
+	// public void emptyCart(){
+    //     Cart.getCart().emptyCart();
+    // }
 }

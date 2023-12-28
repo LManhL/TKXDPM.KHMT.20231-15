@@ -46,17 +46,21 @@ public class PlaceOrderController extends BaseController{
      */
     /*Content coupling: Do order.getlstOrderMedia().add(orderMedia) 
      đang can thiệp trực tiếp đến giá trị thuộc tính của lớp Order*/
-    public Order createOrder() throws SQLException{
-        Order order = new Order();
-        for (Object object : Cart.getCart().getListMedia()) {
-            CartMedia cartMedia = (CartMedia) object;
-            OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
-                                                   cartMedia.getQuantity(), 
-                                                   cartMedia.getPrice());    
-            order.getlstOrderMedia().add(orderMedia);
-        }
-        return order;
-    }
+     // The createOrder should be placed in the Cart class,
+     // This controller class should be only control the flow of the application
+     // not where to write the command code
+     // Violate the single responsibility principle
+    // public Order createOrder() throws SQLException{
+    //     Order order = new Order();
+    //     for (Object object : Cart.getCart().getListMedia()) {
+    //         CartMedia cartMedia = (CartMedia) object;
+    //         OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
+    //                                                cartMedia.getQuantity(), 
+    //                                                cartMedia.getPrice());    
+    //         order.getlstOrderMedia().add(orderMedia);
+    //     }
+    //     return order;
+    // }
 
     /**
      * This method creates the new Invoice based on order
@@ -110,6 +114,8 @@ public class PlaceOrderController extends BaseController{
      * @param order
      * @return shippingFee
      */
+    // This function should be place in Order class 
+    // (this violate the single responsibility principle)
     public int calculateShippingFee(Order order){
         Random rand = new Random();
         int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );
