@@ -12,6 +12,11 @@ import entity.cart.CartMedia;
  * @author nguyenlm
  */
 public class ViewCartController extends BaseController{
+
+    /**
+    *LSP
+    * Co the co loi trong tuong lai khi dung phuong thuc cua lop cha 
+    */
     
     /**
      * This method checks the available products in Cart
