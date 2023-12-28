@@ -49,6 +49,15 @@ public class Media {
         return updated_quantity;
     }
 
+    /* Các hàm getAllMedia(),getMediaById(),getAllMedia(), updateMediaFieldById() vi phạm nguyên tắc OCP.
+     * Bởi vì khi Sqlite thay đổi cách tổ chức dữ liệu, hoặc khi muốn lấy entity khác như book hay cd, hoặc là cần sửa đổi hoặc thêm mới các hàm get, update, delete 
+     * thì lại cần phải sửa dổi code ở trong class Media.
+     * Cách sửa lại: 
+     *  - Cách 1: Định nghĩa một interface có các hàm get, update, delete,... để đại diện cho quy trình lấy dữ liệu từ cơ sở dữ liệu mà không cần biết chi tiết về
+     * cách nó được thực hiện. Sau đó implement nó ở trong các class con.
+     *  - Cách 2: Chuyển Media thành abtract class sau đó để các hàm tương tác với Database là các abtract function dể lớp con override lại
+     */
+
     public Media getMediaById(int id) throws SQLException{
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();
