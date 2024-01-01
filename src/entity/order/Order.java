@@ -43,6 +43,10 @@ public class Order {
         return this.phone;
     }
 
+    public String getPhone() {
+        return this.phone;
+    }
+
     public HashMap<String, Object> getOrderDetail() {
         HashMap<String, Object> orderDetail = new HashMap<>();
         orderDetail.put("email", this.email);

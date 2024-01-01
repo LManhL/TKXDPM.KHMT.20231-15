@@ -12,6 +12,7 @@
          <children>
             <Label text="All Orders" />
             <ListView fx:id="orderList" />
+            <Button fx:id="deleteOrder" text="Delete Order" />
          </children>
       </VBox>
    </children>
