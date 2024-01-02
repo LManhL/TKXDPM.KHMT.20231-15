@@ -1,5 +1,6 @@
 package views.screen.order;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -8,10 +9,14 @@ import controller.ViewOrderController;
 import entity.order.Order;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import views.screen.BaseScreenHandler;
+import views.screen.popup.PopupScreen;
 
 public class OrderScreenHandler extends BaseScreenHandler {
 
@@ -19,6 +24,9 @@ public class OrderScreenHandler extends BaseScreenHandler {
 
     @FXML
     private ListView<Order> orderList;
+
+    @FXML
+    private ImageView aimsImage;
 
     @FXML
     private Button deleteOrder;
@@ -35,8 +43,23 @@ public class OrderScreenHandler extends BaseScreenHandler {
             if (selectedOrder != null) {
                 controller.deleteOrder(selectedOrder.getPhone());
 				orderList.getItems().remove(selectedOrder);
+            } else {
+            	try {
+                    PopupScreen.error("No item selected");
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
+		// fix relative image path caused by fxml
+		File file = new File("assets/images/Logo.png");
+		Image im = new Image(file.toURI().toString());
+		aimsImage.setImage(im);
+
+		// on mouse clicked, we back to home
+		aimsImage.setOnMouseClicked(e -> {
+			homeScreenHandler.show();
+		});
     }
 
     @Override
@@ -49,13 +72,18 @@ public class OrderScreenHandler extends BaseScreenHandler {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-        for (Order order : orders) {
-            Button button = new Button("Order : " + order.getId());
-            button.setOnAction(e -> {
-                controller.deleteOrder(order.getPhone());
-            });
-            vbox.getChildren().add(button);
-        }
-        this.content.getChildren().add(vbox);
+		if (orders == null) {
+		    Label label = new Label("No order found");
+		    vbox.getChildren().add(label);
+		} else {
+	        for (Order order : orders) {
+	            Button button = new Button("Order : " + order.getId());
+	            button.setOnAction(e -> {
+	                controller.deleteOrder(order.getPhone());
+	            });
+	            vbox.getChildren().add(button);
+	        }
+	        this.content.getChildren().add(vbox);
+		}
     }
 }
