@@ -15,6 +15,7 @@ import common.exception.ViewCartException;
 import controller.BaseController;
 import controller.HomeController;
 import controller.ViewCartController;
+import controller.ViewOrderController;
 import entity.cart.Cart;
 import entity.media.Media;
 import javafx.fxml.FXML;
@@ -33,6 +34,7 @@ import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.cart.CartScreenHandler;
+import views.screen.order.OrderScreenHandler;
 
 
 public class HomeScreenHandler extends BaseScreenHandler implements Initializable{
@@ -47,6 +49,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     @FXML
     private ImageView cartImage;
+    
+    @FXML
+    private ImageView orderIcon;
 
     @FXML
     private VBox vboxMedia1;
@@ -116,6 +121,20 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
                 throw new ViewCartException(Arrays.toString(e1.getStackTrace()).replaceAll(", ", "\n"));
             }
         });
+        
+        orderIcon.setOnMouseClicked(e -> {
+        	OrderScreenHandler orderScreen;
+            try {
+                LOGGER.info("User clicked to view orders");
+                orderScreen = new OrderScreenHandler(this.stage, Configs.VIEW_ORDER_SCREEN_PATH);
+                orderScreen.setHomeScreenHandler(this);
+                orderScreen.setBController(new ViewOrderController());
+                orderScreen.show();
+            } catch (IOException ex) {
+                LOGGER.severe("Failed to load order view: " + ex.getMessage());
+                ex.printStackTrace();
+            }
+        });
         addMediaHome(this.homeItems);
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);
@@ -131,6 +150,10 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         File file2 = new File(Configs.IMAGE_PATH + "/" + "cart.png");
         Image img2 = new Image(file2.toURI().toString());
         cartImage.setImage(img2);
+        
+        File file3 = new File(Configs.IMAGE_PATH + "/" + "cart.png");
+        Image img3 = new Image(file3.toURI().toString());
+        orderIcon.setImage(img3);
     }
 
     public void addMediaHome(List items){
