@@ -1,13 +1,11 @@
 package entity.order;
 
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import entity.db.AIMSDB;
-import entity.media.Media;
 import utils.Configs;
 
 public class Order {
@@ -71,6 +69,10 @@ public class Order {
         this.id = id;
     }
 
+    public String getPhone() {
+        return getDeliveryInfo().get("phone");
+    }
+
     public Order(List lstOrderMedia) {
         this.lstOrderMedia = lstOrderMedia;
     }
@@ -82,6 +84,7 @@ public class Order {
     public void removeOrderMedia(OrderMedia om) {
         this.lstOrderMedia.remove(om);
     }
+
 
     public List<OrderMedia> getlstOrderMedia() {
         return this.lstOrderMedia;
@@ -151,7 +154,37 @@ public class Order {
             orderArrayList.add(new Order(orderDTO));
         }
         return orderArrayList;
+    }
 
+    public static ArrayList<Order> getAllOrders() throws SQLException {
+        String sql = "SELECT * FROM `Order`";
+
+        Connection connection = AIMSDB.getConnection();
+        ResultSet resultSet = connection.createStatement().executeQuery(sql);
+
+        ArrayList<OrderDTO> orderDTOArrayList = new ArrayList<>();
+        while (resultSet.next()) {
+            OrderDTO orderDTO = new OrderDTO(
+                    resultSet.getInt("id"),
+                    resultSet.getString("email"),
+                    resultSet.getString("address"),
+                    resultSet.getString("phone"),
+                    resultSet.getInt("userID"),
+                    resultSet.getInt("shipping_fee"),
+                    resultSet.getInt("state"),
+                    resultSet.getString("province"),
+                    resultSet.getString("time"),
+                    resultSet.getString("shipping_instruction"),
+                    resultSet.getString("rush_shipping_instruction"),
+                    resultSet.getInt("is_rush_shipping"));
+            orderDTOArrayList.add(orderDTO);
+        }
+
+        ArrayList<Order> orderArrayList = new ArrayList<>();
+        for (OrderDTO orderDTO : orderDTOArrayList) {
+            orderArrayList.add(new Order(orderDTO));
+        }
+        return orderArrayList;
     }
 
     public static Order getOrderById(int id) throws SQLException {
@@ -251,6 +284,14 @@ public class Order {
         Statement stm = AIMSDB.getConnection().createStatement();
         stm.executeUpdate("UPDATE `Order` SET" + " state = " + 2
                 + " WHERE id=" + orderId);
+    }
+
+    public static void deleteOrderById(int orderId) throws SQLException {
+        String sql = "DELETE FROM `Order` WHERE id = ?";
+        Connection connection = AIMSDB.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, orderId);
+        preparedStatement.executeUpdate();
     }
 
     public String getStateString() {
