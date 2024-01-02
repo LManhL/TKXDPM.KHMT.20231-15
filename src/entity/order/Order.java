@@ -16,6 +16,7 @@ public class Order {
     private int shippingFees;
     private List lstOrderMedia;
     private HashMap<String, String> deliveryInfo;
+    private int id;
     private String email;
     private String address;
     private String phone;
@@ -34,13 +35,23 @@ public class Order {
         this.shipping_fee = shipping_fee;
         this.lstOrderMedia = new ArrayList<>();
     }
+    
+    public Order(int id, String email, String address, String phone, int userID, int shipping_fee) {
+    	this.id = id;
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+        this.userID = userID;
+        this.shipping_fee = shipping_fee;
+        this.lstOrderMedia = new ArrayList<>();
+    }
 
     public Order(List lstOrderMedia) {
         this.lstOrderMedia = lstOrderMedia;
     }
 
-    public String getId() {
-        return this.phone;
+    public int getId() {
+        return this.id;
     }
 
     public String getPhone() {
@@ -102,7 +113,7 @@ public class Order {
     }
 
     public void createOrder(String email, String address, String phone, int userID, int shipping_fee) throws SQLException {
-        String sql = "INSERT INTO aims.Order (email, address, phone, userID, shipping_fee) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO [Order] (email, address, phone, userID, shipping_fee) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement pstmt = AIMSDB.getConnection().prepareStatement(sql);
         pstmt.setString(1, email);
         pstmt.setString(2, address);
@@ -113,12 +124,13 @@ public class Order {
     }
 
     public List<Order> getAllOrders() throws SQLException {
-        String sql = "SELECT * FROM aims.Order";
+    	String sql = "SELECT * FROM [Order]";
         Statement stmt = AIMSDB.getConnection().createStatement();
         ResultSet res = stmt.executeQuery(sql);
         List<Order> orders = new ArrayList<>();
         while(res.next()) {
             Order order = new Order(
+            	res.getInt("id"),
                 res.getString("email"), res.getString("address"),
                 res.getString("phone"), res.getInt("userId"),
                 res.getInt("shipping_fee"));
@@ -128,10 +140,10 @@ public class Order {
     }
     
 
-    public void deleteOrder(String phone) throws SQLException {
-        String sql = "DELETE FROM aims.Order WHERE phone = ?";
+    public void deleteOrder(int id) throws SQLException {
+        String sql = "DELETE FROM [Order] WHERE id = ?";
         PreparedStatement pstmt = AIMSDB.getConnection().prepareStatement(sql);
-        pstmt.setString(1, phone);
+        pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
 

@@ -27,9 +27,9 @@ public class ViewOrderController extends BaseController {
     }
 
     // Method to delete an order
-    public void deleteOrder(String phone) {
+    public void deleteOrder(int id) {
         try {
-            order.deleteOrder(phone);
+            order.deleteOrder(id);
         } catch (SQLException e) {
             e.printStackTrace();
         }

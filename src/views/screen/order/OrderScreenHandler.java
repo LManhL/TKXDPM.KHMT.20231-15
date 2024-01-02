@@ -7,9 +7,12 @@ import java.util.List;
 
 import controller.ViewOrderController;
 import entity.order.Order;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -36,13 +39,18 @@ public class OrderScreenHandler extends BaseScreenHandler {
     }
 
     @FXML
-    public void initialize() throws SQLException {
+    public void initialize() throws SQLException, IOException {
         this.controller = new ViewOrderController();
         deleteOrder.setOnAction(e -> {
             Order selectedOrder = orderList.getSelectionModel().getSelectedItem();
             if (selectedOrder != null) {
-                controller.deleteOrder(selectedOrder.getPhone());
+                controller.deleteOrder(selectedOrder.getId());
 				orderList.getItems().remove(selectedOrder);
+				try {
+					PopupScreen.success("Deleted successfully");
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
             } else {
             	try {
                     PopupScreen.error("No item selected");
@@ -65,25 +73,29 @@ public class OrderScreenHandler extends BaseScreenHandler {
     @Override
     public void show() {
         super.show();
-        VBox vbox = new VBox();
+        ListView<Order> orderListView = (ListView<Order>) this.content.lookup("#orderList");
         List<Order> orders = null;
-		try {
-			orders = controller.getAllOrders();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		if (orders == null) {
-		    Label label = new Label("No order found");
-		    vbox.getChildren().add(label);
-		} else {
-	        for (Order order : orders) {
-	            Button button = new Button("Order : " + order.getId());
-	            button.setOnAction(e -> {
-	                controller.deleteOrder(order.getPhone());
-	            });
-	            vbox.getChildren().add(button);
-	        }
-	        this.content.getChildren().add(vbox);
-		}
+        try {
+            orders = controller.getAllOrders();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (orders != null) {
+            ObservableList<Order> observableList = FXCollections.observableArrayList(orders);
+            orderListView.setItems(observableList);
+            orderListView.setCellFactory(param -> new ListCell<Order>() {
+                @Override
+                protected void updateItem(Order item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty || item == null) {
+                        setText(null);
+                    } else {
+                        setText("Order : " + item.getId() + ", phone: " + item.getPhone() + ", shipping fee: " + item.getShippingFees());
+                    }
+                }
+            });
+        } else {
+            orderListView.getItems().add(new Order());
+        }
     }
 }
