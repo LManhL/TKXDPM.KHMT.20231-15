@@ -7,18 +7,18 @@ import java.util.List;
 
 import controller.ViewOrderController;
 import entity.order.Order;
+import entity.payment.RefundTransaction;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import utils.Configs;
+import utils.Utils;
 import views.screen.BaseScreenHandler;
+import views.screen.ordermanagement.RefundResultScreenHandler;
 import views.screen.popup.PopupScreen;
 
 public class OrderScreenHandler extends BaseScreenHandler {
@@ -35,7 +35,7 @@ public class OrderScreenHandler extends BaseScreenHandler {
     private Button deleteOrder;
 
     public OrderScreenHandler(Stage stage, String screenPath) throws IOException {
-		super(stage, screenPath);
+        super(stage, screenPath);
     }
 
     @FXML
@@ -44,30 +44,24 @@ public class OrderScreenHandler extends BaseScreenHandler {
         deleteOrder.setOnAction(e -> {
             Order selectedOrder = orderList.getSelectionModel().getSelectedItem();
             if (selectedOrder != null) {
-                controller.deleteOrder(selectedOrder.getId());
-				orderList.getItems().remove(selectedOrder);
-				try {
-					PopupScreen.success("Deleted successfully");
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+                showConfirmationAlert(selectedOrder);
             } else {
-            	try {
+                try {
                     PopupScreen.error("No item selected");
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
             }
         });
-		// fix relative image path caused by fxml
-		File file = new File("assets/images/Logo.png");
-		Image im = new Image(file.toURI().toString());
-		aimsImage.setImage(im);
+        // fix relative image path caused by fxml
+        File file = new File("assets/images/Logo.png");
+        Image im = new Image(file.toURI().toString());
+        aimsImage.setImage(im);
 
-		// on mouse clicked, we back to home
-		aimsImage.setOnMouseClicked(e -> {
-			homeScreenHandler.show();
-		});
+        // on mouse clicked, we back to home
+        aimsImage.setOnMouseClicked(e -> {
+            homeScreenHandler.show();
+        });
     }
 
     @Override
@@ -90,12 +84,47 @@ public class OrderScreenHandler extends BaseScreenHandler {
                     if (empty || item == null) {
                         setText(null);
                     } else {
-                        setText("Order : " + item.getId() + ", phone: " + item.getPhone() + ", shipping fee: " + item.getShippingFees());
+                        setText("ID : " + item.getId() + " - " +
+                                " PHONE: " + item.getPhone() + " - " +
+                                "Shipping fee: " + Utils.getCurrencyFormat(item.calculateShippingFees()) + " - " +
+                                "State: " + item.getStateString());
                     }
                 }
             });
         } else {
             orderListView.getItems().add(new Order());
         }
+    }
+
+    private void showConfirmationAlert(Order order) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure want to cancel this order?");
+
+        ButtonType buttonTypeYes = new ButtonType("Yes");
+        ButtonType buttonTypeNo = new ButtonType("No");
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+        alert.showAndWait().ifPresent(response -> {
+            if (response == buttonTypeYes) {
+                controller.deleteOrder(order.getId());
+                orderList.getItems().remove(order);
+                try {
+                    RefundTransaction refundTransaction = controller.refund(order);
+                    showResult("DELETE SUCCESSFULLY - Your money will be refunded as soon as possible");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+            } else if (response == buttonTypeNo) {
+                System.out.println("User click no");
+            }
+        });
+    }
+
+    private void showResult(String message) throws IOException {
+        PopupScreen.success(message);
     }
 }

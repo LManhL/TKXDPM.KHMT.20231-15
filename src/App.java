@@ -49,12 +49,12 @@ public class App extends Application {
 			// After fade out, load actual content
 			fadeOut.setOnFinished((e) -> {
 				try {
-//					HomeScreenHandler homeScreenHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
-//					homeScreenHandler.setScreenTitle("Home Screen");
-//					homeScreenHandler.setImage();
-//					homeScreenHandler.show();
-					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
-					orderManagementAdminScreenHandler.show();
+					HomeScreenHandler homeScreenHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
+					homeScreenHandler.setScreenTitle("Home Screen");
+					homeScreenHandler.setImage();
+					homeScreenHandler.show();
+//					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
+//					orderManagementAdminScreenHandler.show();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}

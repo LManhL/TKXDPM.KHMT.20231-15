@@ -151,7 +151,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         Image img2 = new Image(file2.toURI().toString());
         cartImage.setImage(img2);
         
-        File file3 = new File(Configs.IMAGE_PATH + "/" + "cart.png");
+        File file3 = new File(Configs.IMAGE_PATH + "/" + "orderIcon.png");
         Image img3 = new Image(file3.toURI().toString());
         orderIcon.setImage(img3);
     }
