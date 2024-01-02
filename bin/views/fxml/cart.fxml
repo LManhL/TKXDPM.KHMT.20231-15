@@ -83,6 +83,11 @@
                         <Font name="Segoe UI Bold" size="24.0" />
                      </font>
                   </Button>
+                  <Button fx:id="btnCancelOrder" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="316.0" style="-fx-background-color: #ff0000; -fx-cursor: hand;" text="Cancel Order" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </children>

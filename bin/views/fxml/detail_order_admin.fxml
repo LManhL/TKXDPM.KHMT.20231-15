@@ -13,14 +13,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="includeVAT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Label fx:id="pageTitle" layoutX="60.0" layoutY="-9.0" prefHeight="96.0" text="ORDER DETAIL" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
             <font>
                 <Font name="Segoe UI Semibold" size="42.0" />
             </font>
         </Label>
-        <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="-6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="back" fitHeight="73.0" fitWidth="73.0" layoutX="-6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../assets/images/Logo.png" />
             </image>
@@ -55,7 +55,7 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label text="Shipping fees" GridPane.rowIndex="2">
+                <Label prefHeight="29.0" prefWidth="168.0" text="Shipping fees" GridPane.rowIndex="2">
                     <font>
                         <Font name="Segoe UI" size="24.0" />
                     </font>
@@ -78,10 +78,13 @@
                         <Font name="Segoe UI Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label text="Total" GridPane.rowIndex="3">
+                <Label prefHeight="29.0" prefWidth="67.0" text="Total" GridPane.rowIndex="3">
                     <font>
                         <Font name="Segoe UI" size="24.0" />
                     </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
                 </Label>
                 <Label fx:id="shippingFees" alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="500.0" text="50,000 đ" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
@@ -97,12 +100,14 @@
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="292.80002441406253" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="292.80002441406253" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="91.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Label text="Name">
@@ -121,7 +126,7 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label text="Address" GridPane.rowIndex="3">
+                <Label text="Address" GridPane.rowIndex="4">
                     <font>
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
@@ -129,7 +134,7 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label text="Shipping&#10;Instructions" GridPane.rowIndex="4">
+                <Label text="Shipping&#10;Instructions" GridPane.rowIndex="5">
                     <font>
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
@@ -137,15 +142,21 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label fx:id="lbtime" text="Shipping time" wrapText="true" GridPane.rowIndex="5">
+                <Label fx:id="lbtime" text="Shipping time" wrapText="true" GridPane.rowIndex="6">
                     <font>
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
                 </Label>
-                <Label fx:id="lbrushInstruction" text="Rush shipping Instructions" wrapText="true" GridPane.rowIndex="6">
+                <Label fx:id="lbrushInstruction" text="Rush shipping Instructions" wrapText="true" GridPane.rowIndex="7">
                     <font>
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
                 </Label>
                 <Label text="Email" GridPane.rowIndex="1">
                     <font>
@@ -155,54 +166,80 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-            <Label prefHeight="30.0" prefWidth="423.0" text="Nguyễn Văn Mạnh" GridPane.columnIndex="1">
+            <Label fx:id="name" prefHeight="30.0" prefWidth="423.0" text="Nguyễn Văn Mạnh" GridPane.columnIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="423.0" text="email@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="email" prefHeight="30.0" prefWidth="423.0" text="email@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="425.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label fx:id="phone" prefHeight="30.0" prefWidth="425.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="425.0" text="Hai Bà Trưng, Hà Nội" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label fx:id="address" prefHeight="30.0" prefWidth="425.0" text="Hai Bà Trưng, Hà Nội" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="425.0" text="Không" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label fx:id="shippingInstr" prefHeight="30.0" prefWidth="425.0" text="None" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="425.0" text="Không" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label fx:id="shippingTime" prefHeight="30.0" prefWidth="425.0" text="None" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="30.0" prefWidth="425.0" text="Không" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Label fx:id="rushShippingInstr" prefHeight="30.0" prefWidth="425.0" text="None" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbrushInstruction1" text="State" wrapText="true" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="state" prefHeight="30.0" prefWidth="425.0" text="Waiting" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Province" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="province" prefHeight="30.0" prefWidth="425.0" text="Hai Bà Trưng, Hà Nội" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             </children>
         </GridPane>
-        <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="20.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="630.0">
+        <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="20.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="630.0">
             <content>
                 <VBox fx:id="vboxItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="567.0" />
             </content>
         </ScrollPane>
-        <Button fx:id="cf" alignment="CENTER" contentDisplay="CENTER" layoutX="683.0" layoutY="506.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="380.0" style="-fx-background-color: #5091e6; -fx-cursor: hand;" text="ACCEPT" textFill="WHITE">
+        <Button fx:id="confirm" alignment="CENTER" contentDisplay="CENTER" layoutX="683.0" layoutY="577.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="380.0" style="-fx-background-color: #5091e6; -fx-cursor: hand;" text="ACCEPT" textFill="WHITE">
             <font>
                 <Font name="Segoe UI Bold" size="24.0" />
             </font>
         </Button>
-      <Button fx:id="cf1" alignment="CENTER" contentDisplay="CENTER" layoutX="1135.0" layoutY="506.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="169.0" style="-fx-background-color: red; -fx-cursor: hand;" text="DECLINE" textFill="WHITE">
+      <Button fx:id="decline" alignment="CENTER" contentDisplay="CENTER" layoutX="1134.0" layoutY="577.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="169.0" style="-fx-background-color: red; -fx-cursor: hand;" text="DECLINE" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="24.0" />
          </font>

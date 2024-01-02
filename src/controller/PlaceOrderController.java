@@ -50,17 +50,18 @@ public class PlaceOrderController extends BaseController{
      // This controller class should be only control the flow of the application
      // not where to write the command code
      // Violate the single responsibility principle
-    // public Order createOrder() throws SQLException{
-    //     Order order = new Order();
-    //     for (Object object : Cart.getCart().getListMedia()) {
-    //         CartMedia cartMedia = (CartMedia) object;
-    //         OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
-    //                                                cartMedia.getQuantity(), 
-    //                                                cartMedia.getPrice());    
-    //         order.getlstOrderMedia().add(orderMedia);
-    //     }
-    //     return order;
-    // }
+     public Order createOrder() throws SQLException{
+         Order order = new Order();
+         for (Object object : Cart.getCart().getListMedia()) {
+             CartMedia cartMedia = (CartMedia) object;
+             OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(),
+                                                    cartMedia.getQuantity(),
+                                                    cartMedia.getPrice());
+             orderMedia.setPrice(orderMedia.calculatePrice());
+             order.getlstOrderMedia().add(orderMedia);
+         }
+         return order;
+     }
 
     /**
      * This method creates the new Invoice based on order

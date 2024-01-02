@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="24.0" layoutY="111.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0">
+      <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="23.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="1300.0">
          <content>
             <VBox fx:id="vboxItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="567.0" />
          </content>
@@ -25,5 +27,9 @@
             <Font name="Segoe UI Semibold" size="42.0" />
          </font>
       </Label>
+      <HBox fx:id="pageItems" layoutX="551.0" layoutY="683.0" prefHeight="62.0" prefWidth="216.0">
+         <children>
+            <Pagination fx:id="pagination" prefHeight="62.0" prefWidth="223.0" />
+         </children></HBox>
    </children>
 </AnchorPane>

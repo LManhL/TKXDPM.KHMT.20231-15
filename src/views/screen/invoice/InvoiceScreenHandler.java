@@ -50,7 +50,22 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 	private Label shippingFees;
 
 	@FXML
+	private Label labelTime;
+
+	@FXML
+	private Label labelRushShippingInstr;
+
+	@FXML
+	private Label time;
+
+	@FXML
+	private Label rushInstruction;
+
+	@FXML
 	private Label total;
+
+	@FXML
+	private Label email;
 
 	@FXML
 	private VBox vboxItems;
@@ -69,11 +84,26 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 		province.setText(deliveryInfo.get("province"));
 		instructions.setText(deliveryInfo.get("instructions"));
 		address.setText(deliveryInfo.get("address"));
-		subtotal.setText(Utils.getCurrencyFormat(invoice.getOrder().getAmount()));
-		shippingFees.setText(Utils.getCurrencyFormat(invoice.getOrder().getShippingFees()));
-		int amount = invoice.getOrder().getAmount() + invoice.getOrder().getShippingFees();
-		total.setText(Utils.getCurrencyFormat(amount));
-		invoice.setAmount(amount);
+		email.setText(deliveryInfo.get("email"));
+
+		if(deliveryInfo.get("isRushShipping").equals("Yes")){
+			labelTime.setVisible(true);
+			labelRushShippingInstr.setVisible(true);
+			time.setVisible(true);
+			rushInstruction.setVisible(true);
+			time.setText(deliveryInfo.get("time"));
+			rushInstruction.setText(deliveryInfo.get("rushShippingInstruction"));
+		}
+		else{
+			labelTime.setVisible(false);
+			labelRushShippingInstr.setVisible(false);
+			time.setVisible(false);
+			rushInstruction.setVisible(false);
+		}
+
+		subtotal.setText(Utils.getCurrencyFormat(invoice.getOrder().calculateTotalProductIncludeVAT()));
+		shippingFees.setText(Utils.getCurrencyFormat(invoice.getOrder().calculateShippingFees()));
+		total.setText(Utils.getCurrencyFormat(invoice.getOrder().calculateTotalPrice()));
 		invoice.getOrder().getlstOrderMedia().forEach(orderMedia -> {
 			try {
 				MediaInvoiceScreenHandler mis = new MediaInvoiceScreenHandler(Configs.INVOICE_MEDIA_SCREEN_PATH);
@@ -90,7 +120,7 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 
 	@FXML
 	void confirmInvoice(MouseEvent event) throws IOException {
-		BaseScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN_PATH, invoice);
+		BaseScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN_PATH, invoice.getOrder());
 		paymentScreen.setBController(new PaymentController());
 		paymentScreen.setPreviousScreen(this);
 		paymentScreen.setHomeScreenHandler(homeScreenHandler);
