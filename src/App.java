@@ -10,7 +10,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import utils.Configs;
-import views.screen.home.*;
+import views.screen.home.HomeScreenHandler;
+import views.screen.ordermanagement.OrderManagementAdminScreenHandler;
 
 public class App extends Application {
 
@@ -48,10 +49,12 @@ public class App extends Application {
 			// After fade out, load actual content
 			fadeOut.setOnFinished((e) -> {
 				try {
-					HomeScreenHandler homeHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
-					homeHandler.setScreenTitle("Home Screen");
-					homeHandler.setImage();
-					homeHandler.show();
+//					HomeScreenHandler homeScreenHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
+//					homeScreenHandler.setScreenTitle("Home Screen");
+//					homeScreenHandler.setImage();
+//					homeScreenHandler.show();
+					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
+					orderManagementAdminScreenHandler.show();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}

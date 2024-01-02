@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="screenTitle" layoutX="60.0" layoutY="-9.0" prefHeight="96.0" prefWidth="208.0" text="SHIPPING" textAlignment="CENTER" textFill="#5091e6">
          <font>
@@ -26,17 +27,19 @@
             <Image url="@../../../assets/images/Logo.png" />
          </image>
       </ImageView>
-      <GridPane layoutX="170.0" layoutY="67.0" prefHeight="521.0" prefWidth="1027.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="67.0">
+      <GridPane layoutX="182.0" layoutY="67.0" prefHeight="564.0" prefWidth="1015.0" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="67.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.2" minWidth="0.0" prefWidth="196.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="843.2" minWidth="0.0" prefWidth="843.2" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="63.999996948242185" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="64.40000610351564" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="313.59999389648436" minHeight="10.0" prefHeight="67.19997558593752" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="292.80002441406253" minHeight="10.0" prefHeight="119.1999450683594" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="215.8000549316406" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="313.59999389648436" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="292.80002441406253" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.8000549316406" minHeight="10.0" prefHeight="203.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0">
@@ -56,22 +59,22 @@
                   </Label>
                </children>
             </Pane>
-            <TextField fx:id="name" prefHeight="50.0" promptText="(a-zA-Z)" GridPane.columnIndex="1">
+            <TextField fx:id="name" prefHeight="23.0" prefWidth="838.0" promptText="(a-zA-Z)" GridPane.columnIndex="1">
                <font>
                   <Font name="Segoe UI" size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="phone" prefHeight="50.0" promptText="(0-9) 10 digits" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="phone" prefHeight="12.0" prefWidth="838.0" promptText="(0-9) 10 digits" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Segoe UI" size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="address" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="843.0" promptText="(a-zA-Z)" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="address" alignment="TOP_LEFT" prefHeight="53.0" prefWidth="838.0" promptText="(a-zA-Z)" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Segoe UI" size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="instructions" alignment="TOP_LEFT" prefHeight="140.0" prefWidth="843.0" promptText="(a-zA-Z)" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="instructions" alignment="TOP_LEFT" prefHeight="47.0" prefWidth="838.0" promptText="(a-zA-Z)" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font name="Segoe UI" size="24.0" />
                </font>
@@ -90,23 +93,28 @@
                   </Label>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <Pane prefHeight="101.0" prefWidth="171.0" GridPane.rowIndex="3">
                <children>
-                  <Label layoutX="38.0" layoutY="44.0" text="Address">
+                  <Label graphicTextGap="2.0" layoutX="40.0" layoutY="31.0" text="Address">
                      <font>
                         <Font name="Segoe UI" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="49.0" prefHeight="20.0" prefWidth="22.0" text="*" textAlignment="CENTER" textFill="#eb0d0d">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="32.0" prefHeight="20.0" prefWidth="22.0" text="*" textAlignment="CENTER" textFill="#eb0d0d">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+            <Pane prefHeight="251.0" prefWidth="189.0" GridPane.rowIndex="4">
                <children>
-                  <Label layoutX="24.0" layoutY="77.0" text="Shipping&#10;Instructions">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="23.0" prefHeight="20.0" prefWidth="22.0" text="*" textAlignment="CENTER" textFill="#eb0d0d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="2.0" layoutX="36.0" layoutY="22.0" text="Email">
                      <font>
                         <Font name="Segoe UI" size="24.0" />
                      </font>
@@ -132,9 +140,68 @@
                   </Label>
                </children>
             </Pane>
+            <RadioButton fx:id="chooseShip" mnemonicParsing="false" text="Rush shipping" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </RadioButton>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="296.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="536.0" minWidth="10.0" prefWidth="536.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="labelTime" text="Shipping time">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelRushShippingInstr" text="Rush shipping instruction" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="time" alignment="TOP_LEFT" prefHeight="47.0" prefWidth="838.0" promptText="hh:mm" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rushShippingInstr" alignment="TOP_LEFT" prefHeight="47.0" prefWidth="838.0" promptText="(a-zA-Z)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Label text="Shipping&#10;Instructions" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="email" alignment="TOP_LEFT" prefHeight="53.0" prefWidth="838.0" promptText="(...@gmail.com)" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </TextField>
          </children>
       </GridPane>
-      <Button fx:id="btnConfirmDelivery" alignment="CENTER" contentDisplay="CENTER" layoutX="526.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#submitDeliveryInfo" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #5091e6; -fx-cursor: hand;" text="Confirm delivery" textFill="WHITE">
+      <Button fx:id="btnConfirmDelivery" alignment="CENTER" contentDisplay="CENTER" layoutX="525.0" layoutY="682.0" mnemonicParsing="false" onMouseClicked="#submitDeliveryInfo" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #5091e6; -fx-cursor: hand;" text="Confirm delivery" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="24.0" />
          </font>

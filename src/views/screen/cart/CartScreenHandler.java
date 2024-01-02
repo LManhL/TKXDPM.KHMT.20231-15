@@ -118,7 +118,6 @@ public class CartScreenHandler extends BaseScreenHandler {
 			// create order
 			Order order = placeOrderController.createOrder();
 
-			// display shipping form
 			ShippingScreenHandler ShippingScreenHandler = new ShippingScreenHandler(this.stage, Configs.SHIPPING_SCREEN_PATH, order);
 			ShippingScreenHandler.setPreviousScreen(this);
 			ShippingScreenHandler.setHomeScreenHandler(homeScreenHandler);

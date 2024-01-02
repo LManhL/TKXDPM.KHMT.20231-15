@@ -52,6 +52,8 @@ public class Configs {
 	public static final String POPUP_PATH = "/views/fxml/popup.fxml";
 	public static final String ORDER_MANAGEMENT_ADMIN_PATH = "/views/fxml/order_management_admin.fxml";
 	public static final String ITEM_ORDER_PATH = "/views/fxml/item_order.fxml";
+	public static final String ORDER_DETAIL_ADMIN_PATH = "/views/fxml/detail_order_admin.fxml";
+	public static final String REFUND_RESULT_PATH = "/views/fxml/refund_result.fxml";
 
 	public static Font REGULAR_FONT = Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 24);
 

@@ -1,12 +1,18 @@
 package views.screen.payment;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 
 import controller.PaymentController;
 import entity.cart.Cart;
 import common.exception.PlaceOrderException;
 import entity.invoice.Invoice;
+import entity.order.Order;
+import entity.payment.PaymentTransaction;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,65 +20,76 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import subsystem.vnpay.ConfigVNPay;
 import utils.Configs;
+import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
 
 public class PaymentScreenHandler extends BaseScreenHandler {
 
-	@FXML
-	private Button btnConfirmPayment;
+    private Order order;
+    @FXML
+    private Label pageTitle;
+    @FXML
+    private VBox vBox;
 
-	@FXML
-	private ImageView loadingImage;
+    public PaymentScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
+        super(stage, screenPath);
+        this.setBController(new PaymentController());
+        this.order = order;
+        WebView paymentView = new WebView();
+        WebEngine webEngine = paymentView.getEngine();
+        webEngine.load(((PaymentController) getBController()).generateURL(order.calculateTotalPrice(), "Payment"));
+        webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
+            completePaymentTransaction(newValue);
+        });
+        vBox.getChildren().clear();
+        vBox.getChildren().add(paymentView);
+    }
 
-	private Invoice invoice;
+    private void completePaymentTransaction(String newValue) {
+        if (newValue.contains(ConfigVNPay.vnp_ReturnUrl)) {
+            try {
+                URI uri = new URI(newValue);
+                String query = uri.getQuery();
+                System.out.println(query);
 
-	public PaymentScreenHandler(Stage stage, String screenPath, int amount, String contents) throws IOException {
-		super(stage, screenPath);
-	}
+                Map<String, String> params = Utils.parseQueryString(query);
+                PaymentController controller = (PaymentController) getBController();
+                int orderId = controller.createOrder(order);
+                if (orderId != -1) {
+                    params.put("orderId", String.valueOf(orderId));
+                    PaymentTransaction transaction = controller.makePayment(params);
+                    showResult(transaction);
+                }
 
-	public PaymentScreenHandler(Stage stage, String screenPath, Invoice invoice) throws IOException {
-		super(stage, screenPath);
-		this.invoice = invoice;
-		
-		btnConfirmPayment.setOnMouseClicked(e -> {
-			try {
-				confirmToPayOrder();
-				((PaymentController) getBController()).emptyCart();
-			} catch (Exception exp) {
-				System.out.println(exp.getStackTrace());
-			}
-		});
-	}
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
-	@FXML
-	private Label pageTitle;
+    /**
+     * @throws IOException
+     */
+    void showResult(PaymentTransaction paymentTransaction) throws IOException {
+        PaymentController controller = (PaymentController) getBController();
+        BaseScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, paymentTransaction);
+        controller.emptyCart();
+        resultScreen.setPreviousScreen(this);
+        resultScreen.setHomeScreenHandler(homeScreenHandler);
+        resultScreen.setScreenTitle("Result Screen");
+        resultScreen.show();
 
-	@FXML
-	private TextField cardNumber;
-
-	@FXML
-	private TextField holderName;
-
-	@FXML
-	private TextField expirationDate;
-
-	@FXML
-	private TextField securityCode;
-
-	void confirmToPayOrder() throws IOException{
-		String contents = "pay order";
-		PaymentController ctrl = (PaymentController) getBController();
-		Map<String, String> response = ctrl.payOrder(invoice.getAmount(), contents, cardNumber.getText(), holderName.getText(),
-				expirationDate.getText(), securityCode.getText());
-
-		BaseScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
-		resultScreen.setPreviousScreen(this);
-		resultScreen.setHomeScreenHandler(homeScreenHandler);
-		resultScreen.setScreenTitle("Result Screen");
-		resultScreen.show();
-	}
+    }
 
 }

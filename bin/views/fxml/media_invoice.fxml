@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="662.0" style="-fx-padding: 10 5 5 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="621.0" style="-fx-padding: 10 5 5 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox fx:id="hboxMedia" layoutX="33.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="616.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="1.0">
+      <HBox fx:id="hboxMedia" layoutX="48.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="529.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="11.0">
          <children>
             <VBox fx:id="imageLogoVbox" alignment="CENTER" prefHeight="78.0" prefWidth="185.0">
                <children>
@@ -29,7 +29,7 @@
                <children>
                   <Label fx:id="title" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="269.0" text="Title of Media" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
                      <font>
-                        <Font name="Segoe UI" size="25.0" />
+                        <Font name="Segoe UI" size="22.0" />
                      </font>
                      <VBox.margin>
                         <Insets />
@@ -54,7 +54,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="78.0" prefWidth="216.0">
                <children>
-                  <Label fx:id="labelOutOfStock" prefHeight="44.0" prefWidth="168.0" textFill="#e11111" wrapText="true" />
+                  <Label fx:id="labelOutOfStock" prefHeight="44.0" prefWidth="48.0" textFill="#e11111" wrapText="true" />
                </children>
             </VBox>
             <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="102.0">

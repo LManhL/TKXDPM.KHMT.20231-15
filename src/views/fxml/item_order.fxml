@@ -11,116 +11,94 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="250.0" prefWidth="1250.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="orderItem" prefHeight="146.0" prefWidth="1257.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox layoutX="38.0" prefHeight="260.0" prefWidth="1211.0">
+      <HBox layoutX="269.0" prefHeight="157.0" prefWidth="1032.0">
          <children>
-            <GridPane prefHeight="213.0" prefWidth="338.0">
+            <GridPane prefHeight="117.0" prefWidth="723.0">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="0.0" prefWidth="166.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="843.2" minWidth="0.0" prefWidth="133.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="618.0" minWidth="0.0" prefWidth="291.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="843.2" minWidth="0.0" prefWidth="432.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label prefHeight="30.0" prefWidth="151.0" text="Total price" wrapText="true">
+                  <Label text="Email" wrapText="true">
                      <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
-                     <GridPane.margin>
+                     <padding>
                         <Insets left="10.0" />
-                     </GridPane.margin>
+                     </padding>
                   </Label>
-                  <Label fx:id="totalPrice" prefHeight="17.0" prefWidth="136.0" text="100000" GridPane.columnIndex="1">
+                  <Label fx:id="email" prefHeight="35.0" prefWidth="217.0" text="a@gmail.com" GridPane.columnIndex="1">
                      <font>
-                        <Font size="28.0" />
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="address" prefHeight="60.0" prefWidth="217.0" text="Ha noi" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="phone" prefHeight="26.0" prefWidth="256.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Address" wrapText="true" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Phone" wrapText="true" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="205.0" text="Shipping fee" wrapText="true" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="shippingfee" prefHeight="26.0" prefWidth="256.0" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
                      </font>
                   </Label>
                </children>
             </GridPane>
-            <GridPane prefHeight="218.0" prefWidth="539.0">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="0.0" prefWidth="164.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="843.2" minWidth="0.0" prefWidth="217.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="168.5999969482422" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-               </rowConstraints>
+            <VBox alignment="CENTER" prefHeight="117.0" prefWidth="456.0">
                <children>
-                  <Label text="Email" wrapText="true" GridPane.rowIndex="1">
+                  <Button fx:id="detail" mnemonicParsing="false" prefHeight="48.0" prefWidth="418.0" style="-fx-background-color: yellow;" text="GO TO DETAIL">
                      <font>
-                        <Font size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <Label fx:id="email" prefHeight="35.0" prefWidth="217.0" text="a@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="address" prefHeight="60.0" prefWidth="217.0" text="Ha noi" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="phone" prefHeight="26.0" prefWidth="256.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="isRushShipping" prefHeight="17.0" prefWidth="136.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="48.0" prefWidth="245.0" text="Delivery Information" wrapText="true">
-                     <font>
-                        <Font name="System Bold Italic" size="22.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <Label text="Address" wrapText="true" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <Label text="Phone" wrapText="true" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <Label text="Is rushiping" wrapText="true" GridPane.rowIndex="4">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-               </children>
-            </GridPane>
-            <VBox alignment="CENTER" prefHeight="211.0" prefWidth="288.0">
-               <children>
-                  <Button fx:id="detail" mnemonicParsing="false" prefHeight="72.0" prefWidth="230.0" style="-fx-background-color: yellow;" text="Xem chi tiết">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
+                  <Label fx:id="state" text="Waiting" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
                </children>
             </VBox>
          </children>
@@ -128,9 +106,9 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </HBox>
-      <Label fx:id="stt" layoutX="14.0" layoutY="110.0" text="1" textFill="#cd2c1b">
+      <Label fx:id="stt" layoutX="44.0" layoutY="61.0" text="1" textFill="#cd2c1b">
          <font>
-            <Font size="28.0" />
+            <Font size="24.0" />
          </font>
       </Label>
    </children>
