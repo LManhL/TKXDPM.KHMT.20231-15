@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="788.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="788.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="104.0" prefWidth="1326.0" style="-fx-background-color: #ccebff; -fx-border-color: #33adff;">
          <children>
@@ -37,7 +37,7 @@
                <children>
                   <Pane prefHeight="102.0" prefWidth="562.0">
                      <children>
-                        <TextField layoutX="17.0" layoutY="27.0" prefHeight="48.0" prefWidth="528.0">
+                        <TextField fx:id="searchText" layoutX="17.0" layoutY="27.0" prefHeight="48.0" prefWidth="528.0">
                            <font>
                               <Font size="18.0" />
                            </font></TextField>
@@ -50,6 +50,15 @@
                           </items>
                            <font>
                               <Font size="16.0" />
+                           </font>
+                        </SplitMenuButton>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <SplitMenuButton fx:id="sort" layoutY="30.0" mnemonicParsing="false" text="Sort">
+                           <font>
+                              <Font size="18.0" />
                            </font>
                         </SplitMenuButton>
                      </children>

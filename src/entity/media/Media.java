@@ -58,6 +58,26 @@ public class Media {
      * cách nó được thực hiện. Sau đó implement nó ở trong các class con.
      *  - Cách 2: Chuyển Media thành abtract class sau đó để các hàm tương tác với Database là các abtract function dể lớp con override lại
      */
+    
+    public List<Media> searchMedia(String title) throws SQLException{
+    	String sql = "SELECT * FROM Media where title like '%" + title + "%';";
+        Statement stm = AIMSDB.getConnection().createStatement();
+        ResultSet res = stm.executeQuery(sql);
+        List<Media> list = new ArrayList<Media>();
+        while (res.next()) {
+
+            Media m = new Media()
+                    .setId(res.getInt("id"))
+                    .setTitle(res.getString("title"))
+                    .setQuantity(res.getInt("quantity"))
+                    .setCategory(res.getString("category"))
+                    .setMediaURL(res.getString("imageUrl"))
+                    .setPrice(res.getInt("price"))
+                    .setType(res.getString("type"));
+            list.add(m);
+        }
+        return list;
+    }
 
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM Media ;";
