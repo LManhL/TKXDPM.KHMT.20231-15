@@ -24,6 +24,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -40,6 +41,14 @@ import views.screen.order.OrderScreenHandler;
 public class HomeScreenHandler extends BaseScreenHandler implements Initializable{
 
     public static Logger LOGGER = Utils.getLogger(HomeScreenHandler.class.getName());
+    
+    //search
+    
+    @FXML
+    private SplitMenuButton sort;
+    
+    @FXML
+    private TextField searchText;
 
     @FXML
     private Label numMediaInCart;
@@ -104,7 +113,22 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             e.printStackTrace();
         }
         
-            
+        
+        this.splitMenuBtnSearch.setOnMouseClicked(e ->{
+        	try {
+				List medium = this.getBController().search(this.searchText.getText());
+				this.homeItems = new ArrayList<>();
+	            for (Object object : medium) {
+	                Media media = (Media)object;
+	                MediaHandler m1 = new MediaHandler(Configs.HOME_MEDIA_PATH, media, this);
+	                this.homeItems.add(m1);
+	            }
+			} catch (SQLException | IOException e1) {
+				e1.printStackTrace();
+			}
+        	this.addMediaHome(homeItems);
+        });
+        
         aimsImage.setOnMouseClicked(e -> {
             addMediaHome(this.homeItems);
         });
@@ -139,6 +163,10 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);
         addMenuItem(2, "CD", splitMenuBtnSearch);
+        
+        //search
+        addMenuItemSearch(0, "Title", sort);
+        addMenuItemSearch(1, "Price", sort);
     }
 
     public void setImage(){
@@ -174,6 +202,31 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             });
             return;
         }
+    }
+    
+    private void addMenuItemSearch(int position, String text, MenuButton menuButton) {
+    	
+    	MenuItem menuItem = new MenuItem();
+        Label label = new Label();
+        label.prefWidthProperty().bind(menuButton.widthProperty().subtract(31));
+        label.setText(text);
+        label.setTextAlignment(TextAlignment.RIGHT);
+        menuItem.setGraphic(label);
+        menuItem.setOnAction( e ->{
+        	hboxMedia.getChildren().forEach(node -> {
+                VBox vBox = (VBox) node;
+                vBox.getChildren().clear();
+            });
+        	
+        	if(text.contains("Title")) {
+        		this.getBController().sortTitle(homeItems);
+        	}
+        	else if(text.contains("Price")) {
+        		this.getBController().sortPrice(homeItems);
+        	}
+        	this.addMediaHome(homeItems);
+        });
+        menuButton.getItems().add(position, menuItem);
     }
 
     private void addMenuItem(int position, String text, MenuButton menuButton){
