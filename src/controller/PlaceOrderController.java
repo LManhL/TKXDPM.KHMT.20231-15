@@ -90,25 +90,63 @@ public class PlaceOrderController extends BaseController{
    * @throws InterruptedException
    * @throws IOException
    */
-    public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
-    	
+    public String validateDeliveryInfo(HashMap<String, String> info) {
+        if(!validateName(info.get("name"))){
+            return "Invalid name";
+        }
+        if(!validatePhoneNumber(info.get("phone"))){
+            return "Invalid phone number";
+        }
+        if(!validateAddress(info.get("address"))){
+            return "Invalid address";
+        }
+        if(!validateEmail(info.get("email"))){
+            return "Invalid email";
+        }
+
+        if(info.get("province").isEmpty() || info.get("province") == null){
+            return "Empty province";
+        }
+
+        if(info.get("isRushShipping").equals("Yes")){
+            if(!validateTime(info.get("time"))){
+                return "Invalid time";
+            }
+        }
+        return "Valid";
     }
-    
+
+    public boolean validateTime(String time) {
+        // Assuming time is in HH:mm format
+        String timeRegex = "^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$";
+        return time.matches(timeRegex);
+    }
+
     public boolean validatePhoneNumber(String phoneNumber) {
-    	// TODO: your work
-    	return false;
+        // Assuming a valid phone number has 10 digits
+        String phoneRegex = "^\\d{10}$";
+        return phoneNumber.matches(phoneRegex);
     }
-    
+
     public boolean validateName(String name) {
-    	// TODO: your work
-    	return false;
+        // Assuming a valid name contains only letters and spaces
+        String nameRegex = "^[a-zA-Z\\s]+$";
+        return name.matches(nameRegex);
     }
-    
+
     public boolean validateAddress(String address) {
-    	// TODO: your work
-    	return false;
+        // Assuming a valid address can contain letters, numbers, spaces, and commas
+        String addressRegex = "^[a-zA-Z0-9\\s,]+$";
+        return address.matches(addressRegex);
     }
-    
+
+    public boolean validateEmail(String email) {
+        // Basic email validation regex
+        String emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}$";
+        return email.matches(emailRegex);
+    }
+
+
 
     /**
      * This method calculates the shipping fees of order

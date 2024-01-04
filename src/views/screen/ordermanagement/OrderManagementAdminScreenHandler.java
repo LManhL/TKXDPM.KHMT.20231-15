@@ -4,7 +4,9 @@ import controller.OrderManagementAdminController;
 import entity.order.Order;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import utils.Configs;
@@ -29,6 +31,34 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
     @FXML
     private Pagination pagination;
 
+    @FXML
+    private ImageView pending;
+
+    @FXML
+    private ImageView delivering;
+
+    @FXML
+    private ImageView delivered;
+
+    @FXML
+    private ImageView declined;
+
+    @FXML
+    private Label lbPending;
+
+    @FXML
+    private Label lbDelivering;
+
+    @FXML
+    private Label lbDelivered;
+
+    @FXML
+    private Label lbDeclined;
+
+    private int state;
+
+
+
     private ArrayList<Order> orderList = new ArrayList<>();
 
     private final int itemsPerPage = 30;
@@ -41,6 +71,10 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setBController(new OrderManagementAdminController());
+        state = 0;
+        refreshOpacity();
+        pending.setStyle("-fx-opacity: 1;");
+        lbPending.setStyle("-fx-opacity: 1;");
         initUI();
     }
 
@@ -49,6 +83,39 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
             updatePagination((Integer) newValue);
         });
         updatePagination(0);
+
+        pending.setOnMouseClicked(mouseEvent -> {
+            state = 0;
+            updatePagination(0);
+            refreshOpacity();
+            pending.setStyle("-fx-opacity: 1;");
+            lbPending.setStyle("-fx-opacity: 1;");
+        });
+
+        delivering.setOnMouseClicked(mouseEvent -> {
+            state = 1;
+            updatePagination(0);
+            refreshOpacity();
+            delivering.setStyle("-fx-opacity: 1;");
+            lbDelivering.setStyle("-fx-opacity: 1;");
+        });
+
+        delivered.setOnMouseClicked(mouseEvent -> {
+            state = 2;
+            updatePagination(0);
+            refreshOpacity();
+            delivered.setStyle("-fx-opacity: 1;");
+            lbDelivered.setStyle("-fx-opacity: 1;");
+        });
+
+        declined.setOnMouseClicked(mouseEvent -> {
+            state = 3;
+            updatePagination(0);
+            refreshOpacity();
+            declined.setStyle("-fx-opacity: 1;");
+            lbDeclined.setStyle("-fx-opacity: 1;");
+        });
+
     }
 
     public OrderManagementAdminController getBController() {
@@ -61,10 +128,21 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
         orderDetailScreenHandler.show();
     }
 
+    private void refreshOpacity(){
+        pending.setStyle("-fx-opacity: 0.5;");
+        lbPending.setStyle("-fx-opacity: 0.5;");
+        delivering.setStyle("-fx-opacity: 0.5;");
+        lbDelivering.setStyle("-fx-opacity: 0.5;");
+        delivered.setStyle("-fx-opacity: 0.5;");
+        lbDelivered.setStyle("-fx-opacity: 0.5;");
+        declined.setStyle("-fx-opacity: 0.5;");
+        lbDeclined.setStyle("-fx-opacity: 0.5;");
+    }
+
     private void updatePagination(int pageIndex) {
         vboxItems.getChildren().clear();
         try {
-            ArrayList<Order> orderArrayList = getBController().getOrderByPage(pageIndex, itemsPerPage);
+            ArrayList<Order> orderArrayList = getBController().getOrderByPage(pageIndex, itemsPerPage, state);
             if(orderList != null){
                 orderList.clear();
             }

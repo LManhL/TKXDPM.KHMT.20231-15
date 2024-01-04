@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="23.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="1300.0">
+      <ScrollPane fx:id="vboxIte" hbarPolicy="NEVER" layoutX="211.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="980.0">
          <content>
             <VBox fx:id="vboxItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="567.0" />
          </content>
@@ -31,5 +31,45 @@
          <children>
             <Pagination fx:id="pagination" prefHeight="62.0" prefWidth="223.0" />
          </children></HBox>
+      <ImageView fx:id="pending" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@../../../assets/images/payment.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="delivering" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@../../../assets/images/delivery.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbPending" layoutX="85.0" layoutY="153.0" style="-fx-opacity: 0.5;" text="Pending">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDelivering" layoutX="85.0" layoutY="260.0" style="-fx-opacity: 0.5;" text="Delivering">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="delivered" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@../../../assets/images/done.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbDelivered" layoutX="85.0" layoutY="379.0" style="-fx-opacity: 0.5;" text="Delivered">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="declined" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@../../../assets/images/decline.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbDeclined" layoutX="85.0" layoutY="506.0" style="-fx-opacity: 0.5;" text="Declined">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
