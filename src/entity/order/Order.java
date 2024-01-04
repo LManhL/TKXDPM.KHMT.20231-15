@@ -121,13 +121,14 @@ public class Order {
         return (int) (amount + (Configs.PERCENT_VAT / 100) * amount);
     }
 
-    public static ArrayList<Order> getOrdersByPage(int startRow, int pageSize) throws SQLException {
-        String sql = "SELECT * FROM `Order` LIMIT ?, ?";
+    public static ArrayList<Order> getOrdersByPage(int startRow, int pageSize, int state) throws SQLException {
+        String sql = "SELECT * FROM `Order` WHERE state = ? LIMIT ?, ?";
 
         Connection connection = AIMSDB.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1, startRow); // startRow là giá trị bắt đầu của trang
-        preparedStatement.setInt(2, pageSize); // pageSize là kích thước của mỗi trang
+        preparedStatement.setInt(1, state);
+        preparedStatement.setInt(2, startRow); // startRow là giá trị bắt đầu của trang
+        preparedStatement.setInt(3, pageSize); // pageSize là kích thước của mỗi trang
 
         ResultSet resultSet = preparedStatement.executeQuery();
 

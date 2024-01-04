@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="orderItem" prefHeight="146.0" prefWidth="1257.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="orderItem" prefHeight="112.0" prefWidth="926.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox layoutX="269.0" prefHeight="157.0" prefWidth="1032.0">
+      <HBox layoutX="155.0" prefHeight="110.0" prefWidth="822.0">
          <children>
             <GridPane prefHeight="117.0" prefWidth="723.0">
                <columnConstraints>
@@ -29,7 +29,7 @@
                <children>
                   <Label text="Email" wrapText="true">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
@@ -37,30 +37,30 @@
                   </Label>
                   <Label fx:id="email" prefHeight="35.0" prefWidth="217.0" text="a@gmail.com" GridPane.columnIndex="1">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="address" prefHeight="60.0" prefWidth="217.0" text="Ha noi" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="phone" prefHeight="26.0" prefWidth="256.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                   <Label text="Address" wrapText="true" GridPane.rowIndex="1">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <Label text="Phone" wrapText="true" GridPane.rowIndex="2">
+                  <Label prefWidth="87.0" text="Phone" wrapText="true" GridPane.rowIndex="2">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
@@ -68,7 +68,7 @@
                   </Label>
                   <Label prefHeight="30.0" prefWidth="205.0" text="Shipping fee" wrapText="true" GridPane.rowIndex="3">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
@@ -76,7 +76,7 @@
                   </Label>
                   <Label fx:id="shippingfee" prefHeight="26.0" prefWidth="256.0" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -85,12 +85,12 @@
                <children>
                   <Button fx:id="detail" mnemonicParsing="false" prefHeight="48.0" prefWidth="418.0" style="-fx-background-color: yellow;" text="GO TO DETAIL">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="state" text="Waiting" textAlignment="CENTER">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -106,9 +106,9 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </HBox>
-      <Label fx:id="stt" layoutX="44.0" layoutY="61.0" text="1" textFill="#cd2c1b">
+      <Label fx:id="stt" layoutX="42.0" layoutY="44.0" text="1" textFill="#cd2c1b">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Label>
    </children>
