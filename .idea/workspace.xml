@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="236166bf-1e1e-4a2d-8089-2f32c293fe0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/orderIcon.png" afterDir="false" />
+    <list default="true" id="236166bf-1e1e-4a2d-8089-2f32c293fe0d" name="Changes" comment="merge conflict branch manhTv and develop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/entity/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/utils/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Configs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ViewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ViewOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/view_order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/view_order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/order/OrderScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/order/OrderScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/popup/PopupScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/popup/PopupScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/view_order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/view_order.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +55,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -106,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1703925905233</updated>
     </task>
+    <task id="LOCAL-00001" summary="merge conflict branch manhTv and develop">
+      <created>1704196524414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704196524414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge conflict branch manhTv and develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge conflict branch manhTv and develop" />
   </component>
 </project>
