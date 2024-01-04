@@ -18,9 +18,9 @@ public class OrderManagementAdminController extends BaseController {
         this.vnPay = new VNPaySubsystemSubsystem();
     }
 
-    public ArrayList<Order> getOrderByPage(int curPage, int pageSize) throws SQLException {
+    public ArrayList<Order> getOrderByPage(int curPage, int pageSize, int state) throws SQLException {
         int start = curPage * pageSize;
-        return Order.getOrdersByPage(start, pageSize);
+        return Order.getOrdersByPage(start, pageSize, state);
     }
 
     public Order getOrderDetail(int id) throws SQLException {

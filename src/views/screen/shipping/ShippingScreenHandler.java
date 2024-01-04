@@ -25,6 +25,7 @@ import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
 import views.screen.invoice.InvoiceScreenHandler;
+import views.screen.popup.PopupScreen;
 
 public class ShippingScreenHandler extends BaseScreenHandler implements Initializable {
 
@@ -106,12 +107,16 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
     void submitDeliveryInfo(MouseEvent event) throws IOException, InterruptedException, SQLException {
 
         // add info to messages
+
         HashMap messages = new HashMap<>();
         messages.put("name", name.getText());
         messages.put("phone", phone.getText());
         messages.put("address", address.getText());
         messages.put("instructions", instructions.getText());
-        messages.put("province", province.getValue());
+        if(province.getValue() != null){
+            messages.put("province", province.getValue());
+        }
+        else notifyError("Empty province");
         messages.put("email", email.getText());
 
         if (chooseShip.isSelected()) {
@@ -121,9 +126,11 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
         } else {
             messages.put("isRushShipping", "No");
         }
+        if(!validateShippingInformation(messages)){
+            return;
+        }
 
         try {
-            // process and validate delivery info
             getBController().processDeliveryInfo(messages);
         } catch (InvalidDeliveryInfoException e) {
             throw new InvalidDeliveryInfoException(e.getMessage());
@@ -148,8 +155,16 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
         return (PlaceOrderController) super.getBController();
     }
 
-    public void notifyError() {
-        // TODO: implement later on if we need
+    public void notifyError(String error) throws IOException {
+        PopupScreen.error(error);
+    }
+    private boolean validateShippingInformation(HashMap<String,String> deliveryInfor) throws IOException {
+        String res = getBController().validateDeliveryInfo(deliveryInfor);
+        if(res.equals("Valid")){
+            return true;
+        }
+        notifyError(res);
+        return false;
     }
 
 }
