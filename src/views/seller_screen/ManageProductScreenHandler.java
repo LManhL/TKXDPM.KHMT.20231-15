@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -25,7 +26,9 @@ import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
+import views.screen.ChooseRoleScreenHandler;
 import views.screen.home.HomeScreenHandler;
+import views.screen.ordermanagement.OrderManagementAdminScreenHandler;
 import views.seller_screen.seller_event_screen.ChooseTypeMediaCreate;
 
 public class ManageProductScreenHandler extends BaseScreenHandler implements Initializable {
@@ -49,6 +52,9 @@ public class ManageProductScreenHandler extends BaseScreenHandler implements Ini
 
 	@FXML
 	private Button exit_btn;
+
+	@FXML
+	private Label sign_out;
 
 	private ChooseTypeMediaCreate chooseTypeMediaCreate;
 	private List<?> allTheMedia;
@@ -92,6 +98,26 @@ public class ManageProductScreenHandler extends BaseScreenHandler implements Ini
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		});
+		order_img.setOnMouseClicked(mouseEvent -> {
+			OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = null;
+			try {
+				orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(stage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			orderManagementAdminScreenHandler.show();
+		});
+
+		sign_out.setOnMouseClicked(mouseEvent -> {
+			ChooseRoleScreenHandler roleScreenHandler = null;
+			try {
+				roleScreenHandler = new ChooseRoleScreenHandler(stage, Configs.SELLER_OR_USER_PATH);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			roleScreenHandler.setScreenTitle("Path choosing screen");
+			roleScreenHandler.show();
 		});
 		
 		try{

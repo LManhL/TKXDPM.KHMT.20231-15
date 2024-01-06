@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="">
+    <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/seller_home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/seller_home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/CreateCommonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/CreateCommonInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/DVDCreateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/DVDCreateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/BookUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/BookUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/CDUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/CDUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/vnpay/ConfigVNPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/vnpay/ConfigVNPay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/order_management_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/order_management_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/seller_home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/seller_home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderManagementAdminScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderManagementAdminScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/ManageProductScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/ManageProductScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/lib/win/javafx-sdk-15/lib/javafx.graphics.jar!/javafx/scene/image/ImageView.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,7 +66,30 @@
       <option name="presentableId" value="Default" />
       <updated>1704382013398</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1704544342831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704544342831</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
