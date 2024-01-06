@@ -6,21 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Configs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/MediaProductHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/MediaProductHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Configs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/media_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/media_book.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/media_cd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/media_cd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/media_dvd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/media_dvd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/ManageProductScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/ManageProductScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/CreateMediaItemHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/DeleteMediaItemHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/UpdateMediaItemHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/ChooseRoleScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/ChooseRoleScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,5 +74,15 @@
       <updated>1704382013398</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

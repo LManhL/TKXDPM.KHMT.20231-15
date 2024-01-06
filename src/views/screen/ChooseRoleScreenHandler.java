@@ -25,8 +25,8 @@ public class ChooseRoleScreenHandler extends BaseScreenHandler implements Initia
 	@FXML
 	private Button confirm_btn;
 	
-	HomeScreenHandler homeHandler;
-	ManageProductScreenHandler manageProductScreenHandler;
+	private HomeScreenHandler homeHandler;
+	private ManageProductScreenHandler manageProductScreenHandler;
 
     public ChooseRoleScreenHandler(Stage stage, String screenPath) throws IOException {
 		super(stage, screenPath);
@@ -45,7 +45,7 @@ public class ChooseRoleScreenHandler extends BaseScreenHandler implements Initia
     	seller.setToggleGroup(group);
     	buyer.setToggleGroup(group);
     	seller.setSelected(true);
-    	
+
     	confirm_btn.setOnMouseClicked(event -> {
     		if (seller.isSelected()) {
     			try {

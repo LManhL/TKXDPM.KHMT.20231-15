@@ -13,6 +13,7 @@ import utils.Configs;
 import views.screen.ChooseRoleScreenHandler;
 import views.screen.home.HomeScreenHandler;
 import views.screen.ordermanagement.OrderManagementAdminScreenHandler;
+import views.seller_screen.ManageProductScreenHandler;
 
 public class App extends Application {
 
@@ -51,13 +52,14 @@ public class App extends Application {
 			fadeOut.setOnFinished((e) -> {
 				try {
 					ChooseRoleScreenHandler roleScreenHandler = new ChooseRoleScreenHandler(primaryStage, Configs.SELLER_OR_USER_PATH);
+					roleScreenHandler.setScreenTitle("Path choosing screen");
 					roleScreenHandler.show();
 //					HomeScreenHandler homeScreenHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
 //					homeScreenHandler.setScreenTitle("Home Screen");
 //					homeScreenHandler.setImage();
 //					homeScreenHandler.show();
-//					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
-//					orderManagementAdminScreenHandler.show();
+					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
+					orderManagementAdminScreenHandler.show();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}

@@ -67,8 +67,6 @@ public class Configs {
 	public static final String SELLER_CU_DVD_VIEW_PATH = "/views/fxml/media_dvd.fxml";
 	public static final String SELLER_HOMEPAGE_PATH = "/views/fxml/seller_home.fxml";
 	public static final String SELLER_ITEM_VIEW_PATH = "/views/fxml/media_item.fxml";
-	public static final String SELLER_ALERT_MESSAGE_PATH = "/views/fxml/alert_message.fxml";
-	public static final String SELLER_ORDER_LIST_PATH = "/views/fxml/alert_message.fxml";
 
 	public static final String SELLER_UPDATE_BOOK_PATH = "/views/fxml/update_book.fxml";
 	public static final String SELLER_UPDATE_CD_PATH = "/views/fxml/update_cd.fxml";
