@@ -26,6 +26,7 @@ public class Media {
     protected int value; // the real price of product (eg: 450)
     protected int price; // the price which will be displayed on browser (eg: 500)
     protected int quantity;
+    protected float weight;
     protected String type;
     protected String imageURL;
 
@@ -40,8 +41,20 @@ public class Media {
         this.price = price;
         this.quantity = quantity;
         this.type = type;
-
         //stm = AIMSDB.getConnection().createStatement();
+    }
+
+    public Media (int id, String title, String category, int price, int value,
+                  int quantity, float weight, String type, String imageURL) throws SQLException{
+        this.id = id;
+        this.title = title;
+        this.category = category;
+        this.price = price;
+        this.value = value;
+        this.quantity = quantity;
+        this.weight = weight;
+        this.type = type;
+        this.imageURL = imageURL;
     }
 
     public int getQuantity() throws SQLException {
@@ -115,6 +128,23 @@ public class Media {
         return medium;
     }
 
+    public void createMedia() throws SQLException {
+        // String title, String category, int price, int quantity, String type
+        StringBuilder queryValues = new StringBuilder();
+        queryValues.append("(")
+                .append(title).append(",")
+                .append(category).append(",")
+                .append(price).append(",")
+                .append(quantity).append(",")
+                .append(type).append(")");
+        String sql = "INSERT INTO aims.Media "
+                + "(title, category, price, quantity, type)"
+                + "VALUES "
+                + queryValues.toString() + ";";
+        Statement stm = AIMSDB.getConnection().createStatement();
+        ResultSet res = stm.executeQuery(sql);
+    }
+
     public void updateMediaFieldById(String tbname, int id, String field, Object value) throws SQLException {
         Statement stm = AIMSDB.getConnection().createStatement();
         if (value instanceof String) {
@@ -123,6 +153,11 @@ public class Media {
         stm.executeUpdate(" update " + tbname + " set" + " "
                 + field + "=" + value + " "
                 + "where id=" + id + ";");
+    }
+
+    public void deleteMediaFieldById(int id) throws SQLException {
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.executeUpdate("DELETE FROM " + "Media" + "WHERE id = " + id + ";");
     }
 
     // getter and setter 
@@ -159,6 +194,24 @@ public class Media {
 
     public Media setPrice(int price) {
         this.price = price;
+        return this;
+    }
+
+    public float getWeight() {
+        return this.weight;
+    }
+
+    public Media setWeight(float weight) {
+        this.weight = weight;
+        return this;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    public Media setValue(int value) {
+        this.value = value;
         return this;
     }
 
