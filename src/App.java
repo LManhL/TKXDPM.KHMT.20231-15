@@ -58,8 +58,8 @@ public class App extends Application {
 //					homeScreenHandler.setScreenTitle("Home Screen");
 //					homeScreenHandler.setImage();
 //					homeScreenHandler.show();
-					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
-					orderManagementAdminScreenHandler.show();
+//					OrderManagementAdminScreenHandler orderManagementAdminScreenHandler = new OrderManagementAdminScreenHandler(primaryStage, Configs.ORDER_MANAGEMENT_ADMIN_PATH);
+//					orderManagementAdminScreenHandler.show();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}

@@ -29,7 +29,7 @@ import views.seller_screen.MediaProductHandler;
 import views.seller_screen.seller_event_screen.create.CreateCommonInfo;
 
 public class BookUpdateHandler extends BaseScreenHandler implements Initializable {
-	
+
 	public static Logger LOGGER = Utils.getLogger(BookUpdateHandler.class.getName());
 
 	@FXML
@@ -52,28 +52,28 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 
 	@FXML
 	private TextField language;
-	
+
 	@FXML
 	private TextField title;
-	
+
 	@FXML
 	private TextField value;
 
 	@FXML
 	private TextField price;
-	
+
 	@FXML
 	private TextField weight;
 
 	@FXML
 	private Spinner<Integer> quantity;
-	
+
 	@FXML
 	private Button create;
-	
+
 	@FXML
 	private ComboBox<String> image_url;
-	
+
 	private CreateCommonInfo createCommonInfo;
 	private Media media;
 
@@ -89,8 +89,8 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 		// TODO Auto-generated method stub
 		quantity.setValueFactory(
 				new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 1)
-				);
-		
+		);
+
 		category.getItems().addAll(
 				"Horror",
 				"Science fiction",
@@ -100,8 +100,8 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 				"Comedy",
 				"Thriller",
 				"Romance"
-			);
-		
+		);
+
 		image_url.getItems().addAll(
 				"assets/images/book/book1.jpg",
 				"assets/images/book/book2.jpg",
@@ -115,8 +115,8 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 				"assets/images/book/book10.jpg",
 				"assets/images/book/book11.jpg",
 				"assets/images/book/book12.jpg"
-			);
-		
+		);
+
 		create.setOnMouseClicked(event -> {
 			if (checkFillInformation()) {
 				try {
@@ -129,7 +129,7 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 			}
 		});
 	}
-	
+
 	public void setMediaInfo() throws SQLException {
 		LOGGER.info("Id of the media: " + this.media);
 		Book targetMedia = (Book) new Book().getMediaById(media.getId());
@@ -147,13 +147,13 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 		quantity.getValueFactory().setValue(targetMedia.getQuantity());
 		image_url.setValue(targetMedia.getImageURL());
 	}
-	
+
 	public LocalDate LOCAL_DATE (String dateString){
-	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-	    LocalDate localDate = LocalDate.parse(dateString, formatter);
-	    return localDate;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		LocalDate localDate = LocalDate.parse(dateString, formatter);
+		return localDate;
 	}
-	
+
 	public boolean checkFillInformation() {
 		String comboBoxText = category.getValue();
 		String authorText = author.getText();
@@ -163,18 +163,18 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 		String numOfPages = number_pages.getText();
 		String languageText = language.getText();
 		String imageUrl = image_url.getValue();
-		return comboBoxText.length() > 0 && 
+		return comboBoxText.length() > 0 &&
 				authorText.length() > 0 &&
 				imageUrl.length() > 0 &&
-				coverTypeText.length() > 0 && 
-				publisherText.length() > 0 && 
-				publishDateText.length() > 0 && 
-				numOfPages.length() > 0 && 
+				coverTypeText.length() > 0 &&
+				publisherText.length() > 0 &&
+				publishDateText.length() > 0 &&
+				numOfPages.length() > 0 &&
 				languageText.length() > 0;
 	}
-	
+
 	public void updateBookQuery() throws SQLException {
-		String bookSQL = "UPDATE Book " 
+		String bookSQL = "UPDATE Book "
 				+ "SET "
 				+ "author='" + author.getText() + "',"
 				+ "coverType='" + cover_type.getText() + "',"
@@ -185,9 +185,9 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 				+ "bookCategory='" + category.getValue() + "'"
 				+ " WHERE "
 				+ "id = " + this.media.getId() + ";";
-		
+
 		LOGGER.info("" + bookSQL);
-		
+
 		String mediaSQL = "UPDATE Media "
 				+ "SET "
 				+ "title='" + title.getText() + "',"
@@ -196,11 +196,10 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 				+ "value='" + value.getText() + "',"
 				+ "quantity=" + quantity.getValue() + ","
 				+ "weight='" + weight.getText() + "',"
-				+ "type='" + category.getValue() + "',"
 				+ "imageURL='" + image_url.getValue() + "'"
 				+ " WHERE "
 				+ "id = " + this.media.getId() + ";";
-		
+
 		LOGGER.info("" + mediaSQL);
 		Statement stm = AIMSDB.getConnection().createStatement();
 		stm.executeUpdate(bookSQL);
