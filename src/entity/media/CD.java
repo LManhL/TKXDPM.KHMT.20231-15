@@ -136,7 +136,7 @@ public class CD extends Media {
                 .append("'").append(musicType).append("'").append(", ")
                 .append("'").append(releaseDate).append("'").append(")");
         String sql = "INSERT INTO CD "
-                + "(id, artist, recordLabel, musicType, releaseDate)"
+                + "(id, artist, recordLabel, musicType, releasedDate)"
                 + " VALUES "
                 + queryValues.toString() + ";";
         return sql;
