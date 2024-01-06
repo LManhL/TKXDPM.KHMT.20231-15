@@ -133,6 +133,64 @@
 
 
 <details>
+  <summary>From 18/12/2023 ~ to 06/01/2024 </summary>
+<br>
+<details>
+<summary>Team Member 1: Nguyễn Văn Mạnh</summary>
+<br>
+
+- Assigned tasks:
+  - Find class violate OCP in all project
+- Implementation details:
+  - Pull Request(s): 
+    - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/13
+  - Specific task details:
+      - Identify classes/functions violating OCP, especially those tightly coupled to database details.
+      - Separate database logic to facilitate extension without modifying existing code.
+      - Provide clear instructions or changes for OCP compliance and document reasons for modifications.
+  
+</details>
+
+<details>
+<summary>Team Member 2: Trần Văn Mạnh</summary>
+<br>
+
+- Assigned tasks:  The Interface Segregation Principle + The Dependency Inversion Principle
+- Implementation details:
+  - Pull Request(s): 
+      - 
+  - Specific task details:
+      - 1. The Interface Segregation Principle:
+        - PaymentController has a InterbankSubsystem object, that implements InterbankInterface. But PaymentController doesn't use 1 of InterbankInterface methods (method 'refund'). In this case, it is better to divide InterbankInterface to 2 interfaces.
+      - 2. The Dependency Inversion Principle:
+        - Nothing found.
+</details>
+
+<details>
+<summary>Team Member 3: Đàm Thị Phương Mai</summary>
+<br>
+
+- Assigned tasks: The Liskov Substitution Principle
+- Implementation details:
+  - Pull Request(s):
+    - 
+  - Specific task details:
+</details>
+
+<details>
+<summary>Team Member 4: Nguyễn Đức Minh</summary>
+<br>
+
+- Assigned tasks: The Single Responsibility Principle
+- Implementation details:
+  - Pull Request(s):
+    - https://github.com/LManhL/TKXDPM.KHMT.20231-15/pull/14
+  - Specific task details:
+      - Change some code script location to make it not violate the single responsibility principle (SRP).
+</details>
+</details>
+
+<details>
   <summary>From 11/12/2023 ~ to 17/12/2023 </summary>
 <br>
 <details>
