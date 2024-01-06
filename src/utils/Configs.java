@@ -37,6 +37,11 @@ public class Configs {
 	public static String CURRENCY = "VND";
 	public static float PERCENT_VAT = 10;
 
+	// choose role path
+	public static final String SELLER_OR_USER_PATH = "/views/fxml/seller_or_user.fxml";
+	public static final String CHOOSE_TYPE_CREATE_PATH = "/views/fxml/choose_create_media.fxml";
+	public static final String CREATE_COMMON_MEDIA_PATH = "/views/fxml/common_media_info.fxml";
+
 	// static resource
 	public static final String IMAGE_PATH = "assets/images";
 	public static final String INVOICE_SCREEN_PATH = "/views/fxml/invoice.fxml";
@@ -55,6 +60,17 @@ public class Configs {
 	public static final String ITEM_ORDER_PATH = "/views/fxml/item_order.fxml";
 	public static final String ORDER_DETAIL_ADMIN_PATH = "/views/fxml/detail_order_admin.fxml";
 	public static final String REFUND_RESULT_PATH = "/views/fxml/refund_result.fxml";
+
+	// seller screen resource
+	public static final String SELLER_CU_BOOK_VIEW_PATH = "/views/fxml/media_book.fxml";
+	public static final String SELLER_CU_CD_VIEW_PATH = "/views/fxml/media_cd.fxml";
+	public static final String SELLER_CU_DVD_VIEW_PATH = "/views/fxml/media_dvd.fxml";
+	public static final String SELLER_HOMEPAGE_PATH = "/views/fxml/seller_home.fxml";
+	public static final String SELLER_ITEM_VIEW_PATH = "/views/fxml/media_item.fxml";
+
+	public static final String SELLER_UPDATE_BOOK_PATH = "/views/fxml/update_book.fxml";
+	public static final String SELLER_UPDATE_CD_PATH = "/views/fxml/update_cd.fxml";
+	public static final String SELLER_UPDATE_DVD_PATH = "/views/fxml/update_dvd.fxml";
 
 	public static Font REGULAR_FONT = Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 24);
 
