@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="143.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What do you want to create?" />
+      <RadioButton fx:id="book" layoutX="95.0" layoutY="71.0" mnemonicParsing="false" text="Book" />
+      <RadioButton fx:id="cd" layoutX="201.0" layoutY="71.0" mnemonicParsing="false" text="CD" />
+      <RadioButton fx:id="dvd" layoutX="296.0" layoutY="71.0" mnemonicParsing="false" text="DVD" />
+      <Button fx:id="create" layoutX="194.0" layoutY="119.0" mnemonicParsing="false" text="Create" />
+   </children>
+</AnchorPane>

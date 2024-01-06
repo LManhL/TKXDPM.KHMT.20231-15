@@ -357,7 +357,7 @@ public class Order {
         double amount = 0;
         for (Object object : getlstOrderMedia()) {
             OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
+            amount += om.getMedia().getPrice() * om.getQuantity() ;
         }
         return (int) (amount + (Configs.PERCENT_VAT / 100) * amount);
     }
@@ -366,7 +366,7 @@ public class Order {
         double amount = 0;
         for (Object object : getlstOrderMedia()) {
             OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
+            amount += om.getMedia().getPrice() * om.getQuantity() ;
         }
         return (int) (amount);
     }

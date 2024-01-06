@@ -19,13 +19,26 @@ public class Book extends Media {
     String bookCategory;
 
     public Book() throws SQLException{
-
+        stm = AIMSDB.getConnection().createStatement();
     }
 
     public Book(int id, String title, String category, int price, int quantity, String type, String author,
             String coverType, String publisher, Date publishDate, int numOfPages, String language,
             String bookCategory) throws SQLException{
         super(id, title, category, price, quantity, type);
+        this.author = author;
+        this.coverType = coverType;
+        this.publisher = publisher;
+        this.publishDate = publishDate;
+        this.numOfPages = numOfPages;
+        this.language = language;
+        this.bookCategory = bookCategory;
+    }
+
+    public Book(int id, String title, String category, int price, int value, int quantity, String type, float weight, String imageURL, String author,
+                String coverType, String publisher, Date publishDate, int numOfPages, String language,
+                String bookCategory) throws SQLException{
+        super(id, title, category, price, value, quantity, weight, type, imageURL);
         this.author = author;
         this.coverType = coverType;
         this.publisher = publisher;
@@ -114,24 +127,26 @@ public class Book extends Media {
      * - Bước 3. Tạo một biến có tên mediaRepository bên trong lớp cha của nó là Media
      * - Bước 4. Gọi biến mediaRepository để thực thi các hàm tương ứng, ví dụ bên trong hàm getMediaById gọi mediaRepository.getBookById()
      */
-	
+
     @Override
-    public Media getMediaById(int id) throws SQLException {
+    public Book getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
-                     "aims.Book " +
-                     "INNER JOIN aims.Media " +
-                     "ON Media.id = Book.id " +
-                     "where Media.id = " + id + ";";
+                "Book " +
+                "JOIN Media " +
+                "ON Media.id = Book.id " +
+                "WHERE Media.id = " + id + ";";
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery(sql);
-		if(res.next()) {
-
+        if(res.next()) {
             // from Media table
-            String title = "";
+            String title = res.getString("title");
             String type = res.getString("type");
             int price = res.getInt("price");
+            int value = res.getInt("value");
             String category = res.getString("category");
             int quantity = res.getInt("quantity");
+            float weight = res.getFloat("weight");
+            String imageUrl = res.getString("imageUrl");
 
             // from Book table
             String author = res.getString("author");
@@ -141,20 +156,18 @@ public class Book extends Media {
             int numOfPages = res.getInt("numOfPages");
             String language = res.getString("language");
             String bookCategory = res.getString("bookCategory");
-            
-            return new Book(id, title, category, price, quantity, type, 
-                            author, coverType, publisher, publishDate, numOfPages, language, bookCategory);
-            
-		} else {
-			throw new SQLException();
-		}
+
+            return new Book(id, title, category, price, value, quantity, type, weight, imageUrl,
+                    author, coverType, publisher, publishDate, numOfPages, language, bookCategory);
+        } else {
+            throw new SQLException();
+        }
     }
 
     @Override
     public List getAllMedia() {
         return null;
     }
-
 
     @Override
     public String toString() {
@@ -168,5 +181,29 @@ public class Book extends Media {
             ", language='" + language + "'" +
             ", bookCategory='" + bookCategory + "'" +
             "}";
+    }
+
+    public String createBookQuery(String author, String coverType, String publisher, String publishDate, int numberPages, String language, String category) throws SQLException {
+        StringBuilder queryValues = new StringBuilder();
+        queryValues.append("(")
+                .append("placeForId").append(", ")
+                .append("'").append(author).append("'").append(", ")
+                .append("'").append(coverType).append("'").append(", ")
+                .append("'").append(publisher).append("'").append(", ")
+                .append("'").append(publishDate).append("'").append(", ")
+                .append(numberPages).append(", ")
+                .append("'").append(language).append("'").append(", ")
+                .append("'").append(category).append("'").append(")");
+        String sql = "INSERT INTO Book "
+                + "(id, author, coverType, publisher, publishDate, numOfPages, language, bookCategory)"
+                + " VALUES "
+                + queryValues.toString() + ";";
+        return sql;
+    }
+
+    @Override
+    public void deleteMediaFieldById(int id) throws SQLException {
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.executeUpdate("DELETE FROM " + "Book" + " WHERE id = " + id + ";");
     }
 }

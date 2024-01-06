@@ -79,12 +79,12 @@ public class OrderDetailScreenHandler extends BaseScreenHandler {
         super(stage, screenPath);
         setBController(new OrderManagementAdminController());
         Order order = getBController().getOrderDetail(orderId);
-        initUI(order);
+        display(order);
     }
     public OrderManagementAdminController getBController() {
         return (OrderManagementAdminController) super.getBController();
     }
-    private void initUI(Order order){
+    private void display(Order order){
         this.email.setText(order.getDeliveryInfo().get("email"));
         this.phone.setText(order.getDeliveryInfo().get("phone"));
         this.address.setText(order.getDeliveryInfo().get("address"));

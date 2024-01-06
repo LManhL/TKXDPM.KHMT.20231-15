@@ -24,24 +24,24 @@ public class RefundResponseVNPay {
 
         RefundTransaction refundTransaction = new RefundTransaction(id, message, errorCode, amount, content);
 
-//        switch (refundTransaction.getErrorCode()) {
-//            case "00":
-//                break;
-//            case "02":
-//                throw new InvalidIdentifierException();
-//            case "03":
-//                throw new InvalidRefundRequestDataException();
-//            case "91":
-//                throw new NotFoundTransactionException();
-//            case "94":
-//                throw new ProcessingRefundException();
-//            case "95":
-//                throw new RejectRefundTransactionException();
-//            case "97":
-//                throw new InvalidCheckSumException();
-//            default:
-//                throw new UnrecognizedException();
-//        }
+        switch (refundTransaction.getErrorCode()) {
+            case "00":
+                break;
+            case "02":
+                throw new InvalidIdentifierException();
+            case "03":
+                throw new InvalidRefundRequestDataException();
+            case "91":
+                throw new NotFoundTransactionException();
+            case "94":
+                throw new ProcessingRefundException();
+            case "95":
+                throw new RejectRefundTransactionException();
+            case "97":
+                throw new InvalidCheckSumException();
+            default:
+                throw new UnrecognizedException();
+        }
         return refundTransaction;
     }
 

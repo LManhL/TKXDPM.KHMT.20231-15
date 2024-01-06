@@ -43,7 +43,7 @@ public class ItemOrderScreenHandler extends FXMLScreenHandler {
         setOrderInformation(order, index);
         detail.setOnMouseClicked(mouseEvent -> {
             try {
-                onClickItemOrder.onClick(order.getId());
+                onClickItemOrder.goToOrderDetail(order.getId());
             } catch (IOException | SQLException e) {
                 e.printStackTrace();
             }
@@ -59,6 +59,6 @@ public class ItemOrderScreenHandler extends FXMLScreenHandler {
         this.state.setText(order.getStateString());
     }
     interface OnClickItemOrder {
-        public void onClick(int id) throws IOException, SQLException;
+        public void goToOrderDetail(int id) throws IOException, SQLException;
     }
 }
