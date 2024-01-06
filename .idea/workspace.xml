@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="236166bf-1e1e-4a2d-8089-2f32c293fe0d" name="Changes" comment="update ui order management admin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/entity/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler$OnClickItemOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler$OnClickItemOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderDetailScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderDetailScreenHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/OrderManagementAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderManagementAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ViewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ViewOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/IVNPaySubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/IVNPaySubsystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/VNPaySubsystemSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/VNPaySubsystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/vnpay/RefundResponseVNPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/vnpay/RefundResponseVNPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/ordermanagement/ItemOrderScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/ordermanagement/ItemOrderScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/ordermanagement/ItemPageScreenHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderDetailScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderDetailScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderManagementAdminScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/ordermanagement/OrderManagementAdminScreenHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="236166bf-1e1e-4a2d-8089-2f32c293fe0d" name="Changes" comment="update ui order management admin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704337502835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update ui order management admin">
+      <created>1704540322901</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704540322901</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge conflict branch manhTv and develop" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update ui order management admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ui order management admin" />
   </component>
 </project>
