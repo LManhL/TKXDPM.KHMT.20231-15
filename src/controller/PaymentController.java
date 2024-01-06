@@ -2,15 +2,13 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.Hashtable;
 import java.util.Map;
 
 import entity.cart.Cart;
 import entity.order.Order;
 import entity.payment.PaymentTransaction;
 import subsystem.IVNPaySubsystem;
-import subsystem.VNPaySubsystemSubsystem;
+import subsystem.VNPaySubsystem;
 
 
 /**
@@ -28,7 +26,7 @@ public class PaymentController extends BaseController {
 	private IVNPaySubsystem vnPay;
 
 	public PaymentController(){
-		this.vnPay = new VNPaySubsystemSubsystem();
+		this.vnPay = new VNPaySubsystem();
 	}
 
 

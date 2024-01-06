@@ -2,7 +2,6 @@ package subsystem;
 
 import common.exception.PaymentException;
 import common.exception.UnrecognizedException;
-import entity.order.Order;
 import entity.payment.PaymentTransaction;
 import entity.payment.RefundTransaction;
 import subsystem.vnpay.VNPaySubsystemController;
@@ -17,7 +16,7 @@ import java.util.Map;
  * @author hieud
  *
  */
-public class VNPaySubsystemSubsystem implements IVNPaySubsystem {
+public class VNPaySubsystem implements IVNPaySubsystem {
 
 	/**
 	 * Represent the controller of the subsystem
@@ -28,7 +27,7 @@ public class VNPaySubsystemSubsystem implements IVNPaySubsystem {
 	 * Initializes a newly created {@code InterbankSubsystem} object so that it
 	 * represents an Interbank subsystem.
 	 */
-	public VNPaySubsystemSubsystem() {
+	public VNPaySubsystem() {
 		this.controller = new VNPaySubsystemController();
 	}
 

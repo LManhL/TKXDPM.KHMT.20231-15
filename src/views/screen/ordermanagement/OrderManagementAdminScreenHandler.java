@@ -123,7 +123,7 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
     }
 
     @Override
-    public void onClick(int id) throws IOException, SQLException {
+    public void goToOrderDetail(int id) throws IOException, SQLException {
         OrderDetailScreenHandler orderDetailScreenHandler = new OrderDetailScreenHandler(this.stage, Configs.ORDER_DETAIL_ADMIN_PATH, id);
         orderDetailScreenHandler.show();
     }
@@ -153,7 +153,9 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
             LOGGER.info("Errors occured: " + e.getMessage());
             e.printStackTrace();
         }
-
+        displayOrderList();
+    }
+    private void displayOrderList(){
         for (int i = 0; i < orderList.size(); i++) {
             try {
                 ItemOrderScreenHandler itemOrderScreenHandler = new ItemOrderScreenHandler(Configs.ITEM_ORDER_PATH, orderList.get(i), i + 1, this);
