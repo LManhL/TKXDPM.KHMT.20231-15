@@ -163,6 +163,11 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 		String numOfPages = number_pages.getText();
 		String languageText = language.getText();
 		String imageUrl = image_url.getValue();
+		String titleText = title.getText();
+		String valueText = value.getText();
+		String priceText = price.getText();
+		String weightText = weight.getText();
+		int quantityText = quantity.getValue();
 		return comboBoxText.length() > 0 &&
 				authorText.length() > 0 &&
 				imageUrl.length() > 0 &&
@@ -170,7 +175,12 @@ public class BookUpdateHandler extends BaseScreenHandler implements Initializabl
 				publisherText.length() > 0 &&
 				publishDateText.length() > 0 &&
 				numOfPages.length() > 0 &&
-				languageText.length() > 0;
+				languageText.length() > 0 &&
+				titleText.length() > 0 &&
+				valueText.length() > 0 &&
+				priceText.length() > 0 &&
+				weightText.length() > 0 &&
+				quantityText > 0;
 	}
 
 	public void updateBookQuery() throws SQLException {

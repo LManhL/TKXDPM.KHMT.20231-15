@@ -200,4 +200,10 @@ public class Book extends Media {
                 + queryValues.toString() + ";";
         return sql;
     }
+
+    @Override
+    public void deleteMediaFieldById(int id) throws SQLException {
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.executeUpdate("DELETE FROM " + "Book" + " WHERE id = " + id + ";");
+    }
 }

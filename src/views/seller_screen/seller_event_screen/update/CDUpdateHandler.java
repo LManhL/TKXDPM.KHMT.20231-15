@@ -5,6 +5,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import entity.media.Media;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -47,7 +48,7 @@ public class CDUpdateHandler extends BaseScreenHandler implements Initializable 
 	
 	CreateCommonInfo createCommonInfo;
 
-	public CDUpdateHandler(Stage stage, String screenPath) throws IOException {
+	public CDUpdateHandler(Stage stage, String screenPath, Media media) throws IOException {
 		super(stage, screenPath);
 		// TODO Auto-generated constructor stub
 	}
