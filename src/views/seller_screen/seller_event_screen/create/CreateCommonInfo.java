@@ -77,7 +77,6 @@ public class CreateCommonInfo extends BaseScreenHandler implements Initializable
 					stm.executeUpdate(createQuery);
 					PopupScreen.success("Create success");
 					this.stage.close();
-					return;
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

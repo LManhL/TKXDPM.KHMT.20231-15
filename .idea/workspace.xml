@@ -7,9 +7,16 @@
     <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/CreateCommonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/CreateCommonInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/DVDCreateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/create/DVDCreateHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/BookUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/BookUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/CDUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/CDUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
