@@ -17,7 +17,7 @@
             <VBox fx:id="vboxItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="567.0" />
          </content>
       </ScrollPane>
-      <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="4.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="home_img" fitHeight="73.0" fitWidth="73.0" layoutX="4.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../assets/images/Logo.png" />
          </image>

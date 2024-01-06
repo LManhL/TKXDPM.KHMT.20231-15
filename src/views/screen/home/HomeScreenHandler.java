@@ -34,6 +34,7 @@ import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
+import views.screen.ChooseRoleScreenHandler;
 import views.screen.cart.CartScreenHandler;
 import views.screen.order.OrderScreenHandler;
 
@@ -73,6 +74,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     @FXML
     private HBox hboxMedia;
+
+    @FXML
+    private Label sign_out;
 
     @FXML
     private SplitMenuButton splitMenuBtnSearch;
@@ -159,6 +163,18 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
                 ex.printStackTrace();
             }
         });
+
+        sign_out.setOnMouseClicked(mouseEvent -> {
+            ChooseRoleScreenHandler roleScreenHandler = null;
+            try {
+                roleScreenHandler = new ChooseRoleScreenHandler(stage, Configs.SELLER_OR_USER_PATH);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            roleScreenHandler.setScreenTitle("Path choosing screen");
+            roleScreenHandler.show();
+        });
+
         addMediaHome(this.homeItems);
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);

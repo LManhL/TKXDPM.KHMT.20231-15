@@ -13,6 +13,7 @@ import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.home.HomeScreenHandler;
+import views.seller_screen.ManageProductScreenHandler;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,6 +43,9 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
 
     @FXML
     private ImageView declined;
+
+    @FXML
+    private ImageView home_img;
 
     @FXML
     private Label lbPending;
@@ -116,6 +120,15 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
             lbDeclined.setStyle("-fx-opacity: 1;");
         });
 
+        home_img.setOnMouseClicked(mouseEvent -> {
+            ManageProductScreenHandler manageProductScreenHandler = null;
+            try {
+                manageProductScreenHandler = new ManageProductScreenHandler(stage, Configs.SELLER_HOMEPAGE_PATH);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            manageProductScreenHandler.show();
+        });
     }
 
     public OrderManagementAdminController getBController() {
@@ -123,7 +136,7 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
     }
 
     @Override
-    public void onClick(int id) throws IOException, SQLException {
+    public void goToOrderDetail(int id) throws IOException, SQLException {
         OrderDetailScreenHandler orderDetailScreenHandler = new OrderDetailScreenHandler(this.stage, Configs.ORDER_DETAIL_ADMIN_PATH, id);
         orderDetailScreenHandler.show();
     }
@@ -153,7 +166,9 @@ public class OrderManagementAdminScreenHandler extends BaseScreenHandler impleme
             LOGGER.info("Errors occured: " + e.getMessage());
             e.printStackTrace();
         }
-
+        displayOrderList();
+    }
+    private void displayOrderList(){
         for (int i = 0; i < orderList.size(); i++) {
             try {
                 ItemOrderScreenHandler itemOrderScreenHandler = new ItemOrderScreenHandler(Configs.ITEM_ORDER_PATH, orderList.get(i), i + 1, this);
