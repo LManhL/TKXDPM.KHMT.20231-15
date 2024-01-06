@@ -8,7 +8,7 @@ import entity.order.Order;
 import entity.payment.PaymentTransaction;
 import entity.payment.RefundTransaction;
 import subsystem.IVNPaySubsystem;
-import subsystem.VNPaySubsystemSubsystem;
+import subsystem.VNPaySubsystem;
 
 public class ViewOrderController extends BaseController {
 
@@ -17,7 +17,7 @@ public class ViewOrderController extends BaseController {
 
     public ViewOrderController() {
         this.order = new Order();
-        this.vnPay = new VNPaySubsystemSubsystem();
+        this.vnPay = new VNPaySubsystem();
     }
 
     public List getAllOrders() throws SQLException {

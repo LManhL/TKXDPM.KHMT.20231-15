@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 import entity.media.Book;
+import entity.media.CD;
+import entity.media.DVD;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -125,19 +127,8 @@ public class DVDCreateHandler extends BaseScreenHandler implements Initializable
 	}
 	
 	public String createDVDQuery() throws SQLException {
-		StringBuilder queryValues = new StringBuilder();
-		queryValues.append("(")
-		.append(discType.getValue()).append(", ")
-		.append(director.getText()).append(", ")
-		.append(runtime.getText()).append(", ")
-		.append(studio.getText().toString()).append(", ")
-		.append(subtitles.getText()).append(", ")
-		.append(releasedDate.getValue()).append(", ")
-		.append(filmType.getValue()).append(")");
-		String sql = "INSERT INTO aims.Book " 
-				+ "(discType, director, runtime, studio, subtitles, releasedDate, filmType)"
-				+ " VALUES "
-				+ queryValues.toString() + ";";
-		return sql;
+		DVD cdEntity = new DVD();
+		String createSql = cdEntity.createDVDQuery(discType.getValue(), director.getText(), Integer.parseInt(runtime.getText()), studio.getText(), subtitles.getText(), releasedDate.getValue().toString(), filmType.getValue());
+		return createSql;
 	}
 }
