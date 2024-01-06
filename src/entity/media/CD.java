@@ -1,7 +1,10 @@
 package entity.media;
 
+import entity.db.AIMSDB;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 import java.util.List;
 
@@ -137,5 +140,11 @@ public class CD extends Media {
                 + " VALUES "
                 + queryValues.toString() + ";";
         return sql;
+    }
+
+    @Override
+    public void deleteMediaFieldById(int id) throws SQLException {
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.executeUpdate("DELETE FROM " + "CD" + " WHERE id = " + id + ";");
     }
 }

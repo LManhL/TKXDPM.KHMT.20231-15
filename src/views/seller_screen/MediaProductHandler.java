@@ -3,8 +3,12 @@ package views.seller_screen;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.logging.Logger;
 
+import entity.media.Book;
+import entity.media.CD;
+import entity.media.DVD;
 import entity.media.Media;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,7 +19,10 @@ import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.FXMLScreenHandler;
+import views.screen.popup.PopupScreen;
 import views.seller_screen.seller_event_screen.update.BookUpdateHandler;
+import views.seller_screen.seller_event_screen.update.CDUpdateHandler;
+import views.seller_screen.seller_event_screen.update.DVDUpdateHandler;
 
 // This class is used for handle the administrators/seller action 
 // to each media product in the AdminHome page
@@ -47,6 +54,9 @@ public class MediaProductHandler extends FXMLScreenHandler {
 	private Media media;
 	private int id;
 	private BookUpdateHandler bookUpdateHandler;
+	private CDUpdateHandler cdUpdateHandler;
+	private DVDUpdateHandler dvdUpdateHandler;
+	private Media mediaHandler;
 
 	public MediaProductHandler(String screenPath, Media media) throws IOException, SQLException {
 		super(screenPath);
@@ -71,26 +81,59 @@ public class MediaProductHandler extends FXMLScreenHandler {
 		item_price.setText("" + media.getPrice());
 
 		update_btn.setOnMouseClicked(event -> {
-			try {
-				bookUpdateHandler = new BookUpdateHandler(new Stage(), Configs.SELLER_UPDATE_BOOK_PATH, this.media);
-				bookUpdateHandler.setScreenTitle("Book Update Dialog");
-				bookUpdateHandler.show();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if (this.media.getType() == "BOOK") {
+				try {
+					bookUpdateHandler = new BookUpdateHandler(new Stage(), Configs.SELLER_UPDATE_BOOK_PATH, this.media);
+					bookUpdateHandler.setScreenTitle("Book Update Dialog");
+					bookUpdateHandler.show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (this.media.getType() == "CD") {
+				try {
+					cdUpdateHandler = new CDUpdateHandler(new Stage(), Configs.SELLER_UPDATE_CD_PATH, this.media);
+					cdUpdateHandler.setScreenTitle("Book Update Dialog");
+					cdUpdateHandler.show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else {
+				try {
+					dvdUpdateHandler = new DVDUpdateHandler(new Stage(), Configs.SELLER_UPDATE_DVD_PATH, this.media);
+					dvdUpdateHandler.setScreenTitle("Book Update Dialog");
+					dvdUpdateHandler.show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 
 		delete_btn.setOnMouseClicked(event -> {
 			try {
 				this.media.deleteMediaFieldById(this.id);
+				if (Objects.equals(this.media.getType(), "BOOK")) {
+					new Book().deleteMediaFieldById(this.media.getId());
+					// mediaHandler.deleteMediaFieldById(this.media.getId());
+				} else if (Objects.equals(this.media.getType(), "CD")) {
+					new CD().deleteMediaFieldById(this.media.getId());
+					// mediaHandler.deleteMediaFieldById(this.media.getId());
+				} else {
+					new DVD().deleteMediaFieldById(this.media.getId());
+					// mediaHandler.deleteMediaFieldById(this.media.getId());
+				}
+				PopupScreen.success("Delete success");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-		});
+			} catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
 	}
 }
