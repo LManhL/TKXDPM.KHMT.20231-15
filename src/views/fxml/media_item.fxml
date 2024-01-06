@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="item_img" fitHeight="133.0" fitWidth="127.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="153.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Media Name:" />
+      <Text layoutX="151.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" />
+      <Text layoutX="151.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+      <Button fx:id="update_btn" layoutX="153.0" layoutY="121.0" mnemonicParsing="false" text="Update" />
+      <Button fx:id="delete_btn" layoutX="219.0" layoutY="121.0" mnemonicParsing="false" text="Delete" />
+      <Text layoutX="151.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+      <Text fx:id="item_type" layoutX="185.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book" />
+      <Text fx:id="item_name" layoutX="228.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text fx:id="item_quantity" layoutX="203.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" />
+      <Text fx:id="item_price" layoutX="183.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+   </children>
+</AnchorPane>

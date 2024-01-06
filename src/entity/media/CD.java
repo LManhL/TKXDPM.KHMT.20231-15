@@ -25,6 +25,15 @@ public class CD extends Media {
         this.releasedDate = releasedDate;
     }
 
+    public CD(int id, String title, String category, int price, int value, int quantity, String type, float weight, String imageURL, String artist,
+              String recordLabel, String musicType, Date releasedDate) throws SQLException{
+        super(id, title, category, price, value, quantity, weight, type, imageURL);
+        this.artist = artist;
+        this.recordLabel = recordLabel;
+        this.musicType = musicType;
+        this.releasedDate = releasedDate;
+    }
+
     public String getArtist() {
         return this.artist;
     }
@@ -80,32 +89,34 @@ public class CD extends Media {
     @Override
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
-                     "aims.CD " +
-                     "INNER JOIN aims.Media " +
-                     "ON Media.id = CD.id " +
-                     "where Media.id = " + id + ";";
+                "CD " +
+                "JOIN Media " +
+                "ON Media.id = CD.id " +
+                "where Media.id = " + id + ";";
         ResultSet res = stm.executeQuery(sql);
-		if(res.next()) {
-            
+        if(res.next()) {
             // from media table
-            String title = "";
+            String title = res.getString("title");
             String type = res.getString("type");
             int price = res.getInt("price");
+            int value = res.getInt("value");
             String category = res.getString("category");
             int quantity = res.getInt("quantity");
+            float weight = res.getFloat("weight");
+            String imageUrl = res.getString("imageUrl");
 
             // from CD table
             String artist = res.getString("artist");
             String recordLabel = res.getString("recordLabel");
             String musicType = res.getString("musicType");
             Date releasedDate = res.getDate("releasedDate");
-           
-            return new CD(id, title, category, price, quantity, type, 
-                          artist, recordLabel, musicType, releasedDate);
-            
-		} else {
-			throw new SQLException();
-		}
+
+            return new CD(id, title, category, price, value, quantity, type, weight, imageUrl,
+                    artist, recordLabel, musicType, releasedDate);
+
+        } else {
+            throw new SQLException();
+        }
     }
 
     @Override
@@ -113,4 +124,18 @@ public class CD extends Media {
         return null;
     }
 
+    public String createCDQuery(String artist, String recordLabel, String musicType, String releaseDate) throws SQLException {
+        StringBuilder queryValues = new StringBuilder();
+        queryValues.append("(")
+                .append("placeForId").append(", ")
+                .append("'").append(artist).append("'").append(", ")
+                .append("'").append(recordLabel).append("'").append(", ")
+                .append("'").append(musicType).append("'").append(", ")
+                .append("'").append(releaseDate).append("'").append(")");
+        String sql = "INSERT INTO CD "
+                + "(id, artist, recordLabel, musicType, releaseDate)"
+                + " VALUES "
+                + queryValues.toString() + ";";
+        return sql;
+    }
 }
