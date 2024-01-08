@@ -4,7 +4,126 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="update ui" />
+    <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="update ui">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_2_2024_6_54_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_2_2024_6_54_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2024_6_28_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2024_6_28_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIMS-Student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ValidatePhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ValidatePhoneNumberTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/AimsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/AimsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/AnonymousTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/AnonymousTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InternalServerErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InternalServerErrorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidCardException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidCardException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidCheckSumException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidCheckSumException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidDeliveryInfoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidDeliveryInfoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidIdentifierException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidIdentifierException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidRefundRequestDataException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidRefundRequestDataException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidTransactionAmountException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidTransactionAmountException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidVersionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidVersionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/MediaNotAvailableException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/MediaNotAvailableException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/MediaUpdateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/MediaUpdateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/NotEnoughBalanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/NotEnoughBalanceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/NotEnoughTransactionInfoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/NotEnoughTransactionInfoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/NotFoundTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/NotFoundTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/PaymentException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/PaymentException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/PlaceOrderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/PlaceOrderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ProcessInvoiceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ProcessInvoiceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ProcessingException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ProcessingException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ProcessingRefundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ProcessingRefundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/RefundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/RefundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/RejectRefundTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/RejectRefundTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/RejectedTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/RejectedTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/SendToBankException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/SendToBankException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/SuspiciousTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/SuspiciousTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionFailedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionFailedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionNotDoneException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionNotDoneException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionReverseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionReverseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/UnrecognizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/UnrecognizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ViewCartException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ViewCartException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/HomeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/HomeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/HomeController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/HomeController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/OrderManagementAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/OrderManagementAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/PlaceOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/SellerHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/SellerHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/ViewCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/ViewCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/ViewOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/ViewOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/cart/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/cart/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/cart/CartMedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/cart/CartMedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/db/AIMSDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/db/AIMSDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/invoice/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/invoice/Invoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/CD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/CD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/DVD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/Order$OrderState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/Order$OrderState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/OrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/OrderMedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/OrderMedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/payment/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/payment/CreditCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/payment/PaymentTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/payment/PaymentTransaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/payment/RefundTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/payment/RefundTransaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/seller/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/seller/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/seller_media/SellerMediaItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/seller_media/SellerMediaItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/seller_media/SellerMediaList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/seller_media/SellerMediaList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/IVNPaySubsystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/IVNPaySubsystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemSubsystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemSubsystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/PayRequestVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/PayRequestVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/PayResponseVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/PayResponseVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/RefundRequestVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/RefundRequestVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/RefundResponseVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/RefundResponseVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPayBoundary.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPayBoundary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/API.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Configs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/MyMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/MyMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/BaseScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/BaseScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ChooseRoleScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ChooseRoleScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/FXMLScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/FXMLScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/SplashScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/SplashScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/cart/CartScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/cart/CartScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/cart/MediaHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/cart/MediaHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/home/MediaHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/home/MediaHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/MediaInvoiceScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/MediaInvoiceScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler$OnClickItemOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler$OnClickItemOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemOrderScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemPageScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/ItemPageScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderDetailScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderDetailScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/OrderManagementAdminScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/ordermanagement/RefundResultScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/ordermanagement/RefundResultScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/payment/ResultScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/payment/ResultScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/ManageProductScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/MediaProductHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/MediaProductHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/ChooseTypeMediaCreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/ChooseTypeMediaCreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/BookCreateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/BookCreateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/CDCreateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/CDCreateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/CreateCommonInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/CreateCommonInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/DVDCreateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/create/DVDCreateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/BookUpdateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/BookUpdateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/CDUpdateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/CDUpdateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/seller_screen/seller_event_screen/update/DVDUpdateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/seller_screen/MediaProductHandler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +142,17 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -62,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704546714271</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update ui">
+      <created>1704553331381</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553331381</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

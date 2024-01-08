@@ -63,7 +63,7 @@ public class OrderMedia {
     }
 
     public static ArrayList<OrderMedia> getAllOrderMediaByOrderId(int orderId) throws SQLException {
-        String sql = "SELECT OrderMedia.*, Media.id, Media.title, Media.category, Media.imageUrl, Media.price as mediaPrice, Media.type "
+        String sql = "SELECT OrderMedia.*, Media.id, Media.title, Media.category, Media.imageUrl, Media.price as mediaPrice, Media.type, Media.weight "
                 + "FROM OrderMedia "
                 + "INNER JOIN Media ON OrderMedia.mediaID = Media.id "
                 + "WHERE OrderMedia.orderID = " + orderId + ";";
@@ -82,7 +82,8 @@ public class OrderMedia {
                     .setCategory(res.getString("category"))
                     .setMediaURL(res.getString("imageUrl"))
                     .setPrice(res.getInt("mediaPrice"))
-                    .setType(res.getString("type"));
+                    .setType(res.getString("type"))
+                    .setWeight(res.getFloat("weight"));
             int quantity = res.getInt("quantity");
             int price = res.getInt("price");
 

@@ -81,7 +81,7 @@ public class MediaProductHandler extends FXMLScreenHandler {
 		item_price.setText("" + media.getPrice());
 
 		update_btn.setOnMouseClicked(event -> {
-			if (this.media.getType() == "BOOK") {
+			if (this.media.getType().equals("BOOK")) {
 				try {
 					bookUpdateHandler = new BookUpdateHandler(new Stage(), Configs.SELLER_UPDATE_BOOK_PATH, this.media);
 					bookUpdateHandler.setScreenTitle("Book Update Dialog");
@@ -93,7 +93,7 @@ public class MediaProductHandler extends FXMLScreenHandler {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (this.media.getType() == "CD") {
+			} else if (this.media.getType().equals("CD")) {
 				try {
 					cdUpdateHandler = new CDUpdateHandler(new Stage(), Configs.SELLER_UPDATE_CD_PATH, this.media);
 					cdUpdateHandler.setScreenTitle("Book Update Dialog");
