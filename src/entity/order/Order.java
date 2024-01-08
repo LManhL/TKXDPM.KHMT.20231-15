@@ -349,7 +349,7 @@ public class Order {
     }
 
     public boolean isUrban() {
-        String address = deliveryInfo.get("address");
+        String address = deliveryInfo.get("province");
         return address.toLowerCase().contains("hà nội") || address.toLowerCase().contains("hồ chí minh");
     }
 

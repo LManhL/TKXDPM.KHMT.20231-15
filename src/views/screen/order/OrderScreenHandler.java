@@ -110,8 +110,10 @@ public class OrderScreenHandler extends BaseScreenHandler {
                 controller.deleteOrder(order.getId());
                 orderList.getItems().remove(order);
                 try {
-                    RefundTransaction refundTransaction = controller.refund(order);
-                    showResult("DELETE SUCCESSFULLY - Your money will be refunded as soon as possible");
+                    if(order.getState() == Order.OrderState.WAITING || order.getState() == Order.OrderState.DELIVERING){
+                        RefundTransaction refundTransaction = controller.refund(order);
+                        showResult("DELETE SUCCESSFULLY - Your money will be refunded as soon as possible");
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (SQLException e) {

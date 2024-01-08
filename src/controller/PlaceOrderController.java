@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -112,6 +113,8 @@ public class PlaceOrderController extends BaseController{
             if(!validateTime(info.get("time"))){
                 return "Invalid time";
             }
+            String province = info.get("province").toLowerCase();
+            if(!province.contains("hà nội") && !province.contains("hồ chí minh")) return "Address not support rush shipping";
         }
         return "Valid";
     }
