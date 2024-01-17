@@ -349,7 +349,7 @@ public class Order {
     }
 
     public boolean isUrban() {
-        String address = deliveryInfo.get("address");
+        String address = deliveryInfo.get("province");
         return address.toLowerCase().contains("hà nội") || address.toLowerCase().contains("hồ chí minh");
     }
 
@@ -376,12 +376,12 @@ public class Order {
     }
 
     public double getMaxWeight() {
-        int max = 0;
+        float max = 0;
         for (Object object : getlstOrderMedia()) {
             OrderMedia om = (OrderMedia) object;
-            if (om.getMedia().getPrice() > max) max = om.getMedia().getPrice();
+            if (om.getMedia().getWeight() > max) max = om.getMedia().getWeight();
         }
-        return max / 30000.0;
+        return max;
     }
 
     public int calculateTotalPrice() {

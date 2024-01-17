@@ -3,8 +3,9 @@ package controller;
 import entity.order.Order;
 import entity.payment.PaymentTransaction;
 import entity.payment.RefundTransaction;
-import subsystem.IVNPaySubsystem;
-import subsystem.VNPaySubsystem;
+import subsystem.IPaymentSubsystem;
+import subsystem.PaymentSubsystem;
+import subsystem.vnpay.VNPaySubsystemController;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 
 public class OrderManagementAdminController extends BaseController {
 
-    private IVNPaySubsystem vnPay;
+    private IPaymentSubsystem vnPay;
 
     public OrderManagementAdminController() {
-        this.vnPay = new VNPaySubsystem();
+        this.vnPay = new PaymentSubsystem(new VNPaySubsystemController());
     }
 
     public ArrayList<Order> getOrderByPage(int curPage, int pageSize, int state) throws SQLException {

@@ -7,8 +7,9 @@ import java.util.Map;
 import entity.cart.Cart;
 import entity.order.Order;
 import entity.payment.PaymentTransaction;
-import subsystem.IVNPaySubsystem;
-import subsystem.VNPaySubsystem;
+import subsystem.IPaymentSubsystem;
+import subsystem.PaymentSubsystem;
+import subsystem.vnpay.VNPaySubsystemController;
 
 
 /**
@@ -23,10 +24,10 @@ public class PaymentController extends BaseController {
 	/**
 	 * Represent the Interbank subsystem
 	 */
-	private IVNPaySubsystem vnPay;
+	private IPaymentSubsystem vnPay;
 
 	public PaymentController(){
-		this.vnPay = new VNPaySubsystem();
+		this.vnPay = new PaymentSubsystem(new VNPaySubsystemController());
 	}
 
 

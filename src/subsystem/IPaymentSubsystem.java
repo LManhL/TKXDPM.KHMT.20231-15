@@ -10,12 +10,12 @@ import java.util.Map;
 
 /**
  * The {@code InterbankInterface} class is used to communicate with the
- * {@link VNPaySubsystem InterbankSubsystem} to make transaction
+ * {@link PaymentSubsystem InterbankSubsystem} to make transaction
  * 
  * @author hieud
  * 
  */
-public interface IVNPaySubsystem {
+public interface IPaymentSubsystem {
 
 	public abstract PaymentTransaction getPaymentTransaction(Map<String,String> res)
 			throws PaymentException, UnrecognizedException, IOException;
