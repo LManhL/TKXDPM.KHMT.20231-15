@@ -7,17 +7,18 @@ import java.util.List;
 import entity.order.Order;
 import entity.payment.PaymentTransaction;
 import entity.payment.RefundTransaction;
-import subsystem.IVNPaySubsystem;
-import subsystem.VNPaySubsystem;
+import subsystem.IPaymentSubsystem;
+import subsystem.PaymentSubsystem;
+import subsystem.vnpay.VNPaySubsystemController;
 
 public class ViewOrderController extends BaseController {
 
     private Order order;
-    private IVNPaySubsystem vnPay;
+    private IPaymentSubsystem vnPay;
 
     public ViewOrderController() {
         this.order = new Order();
-        this.vnPay = new VNPaySubsystem();
+        this.vnPay = new PaymentSubsystem(new VNPaySubsystemController());
     }
 
     public List getAllOrders() throws SQLException {

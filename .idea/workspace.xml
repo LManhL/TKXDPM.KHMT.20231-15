@@ -5,19 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="228d128d-7d0d-4ca2-a953-3525d59eef86" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/order/OrderScreenHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/vnpay/ConfigVNPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/vnpay/ConfigVNPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/order/OrderScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/order/OrderScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/OrderManagementAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/OrderManagementAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/ViewOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/ViewOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/IVNPaySubsystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemSubsystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/OrderManagementAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderManagementAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ViewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ViewOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/IVNPaySubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/IPaymentSubsystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/VNPaySubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/PaymentSubsystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/VNPaySubsystemSubsystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/vnpay/VNPaySubsystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/vnpay/VNPaySubsystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +58,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -96,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704686718447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1704687726140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704687726140</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
